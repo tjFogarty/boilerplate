@@ -3,5 +3,7 @@
 
 'use strict';
 
-// `require` your modules here
-require('./modules/hello');
+$(document).ready(function () { 
+  // `require` your modules here
+  require('./modules/hello');
+});

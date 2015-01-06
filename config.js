@@ -13,7 +13,7 @@ var config = {
   // Assets
   bower_file: 'bower.json',
 
-  ee_watch: 'admin/templates/default_site/**/*.html', // ExpressionEngine files
+  workfiles_watch: '**/*.php', // ExpressionEngine files
 
   js_entry_file: './assets/scripts/main.js', // why is the dot there? I don't know, but it works
   js_dir: 'assets/scripts/',
@@ -21,7 +21,13 @@ var config = {
 
   scss_entry_file: 'assets/scss/main.scss',
   scss_watch: 'assets/scss/**/*.scss',
-  css_dir: 'assets/css'
+  css_dir: 'assets/css',
+  css_entry_file: 'assets/css/main.css',
+  critical_css: 'critical.php',
+
+  wiredep_file: './index.php',
+  wiredep_dest: './'
+
 };
 
 module.exports = config;

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Boiletplate</title>
+    <title>Boilerplate</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,6 +15,7 @@
     <![endif]-->
 
     <!-- bower:js -->
+    <script src="assets/lib/jquery/dist/jquery.js"></script>
     <!-- endbower -->
 
     <script src="/assets/scripts/main.bundle.js"></script>

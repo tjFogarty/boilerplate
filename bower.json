@@ -6,13 +6,7 @@
   ],
   "description": "Boilerplate for web projects",
   "license": "MIT",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "assets/lib"
-    "test",
-    "tests"
-  ]
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
 }

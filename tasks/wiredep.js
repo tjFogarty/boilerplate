@@ -3,13 +3,14 @@
 'use strict';
 
 var gulp = require('gulp');
+var config = require('../config');
+var wiredep = require('wiredep').stream;  
 
 gulp.task('wiredep', function () {
-  var wiredep = require('wiredep').stream;
-  gulp.src('index.php')
+  gulp.src(config.wiredep_file)
     .pipe(wiredep({
       directory: 'assets/lib',
       ignorePath: '',
       exclude: ['foundation', 'modernizr']
-    })).pipe(gulp.dest('index.php'));
+    })).pipe(gulp.dest(config.wiredep_dest));
 });
