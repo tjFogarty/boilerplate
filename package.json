@@ -8,6 +8,7 @@
     "browser-sync": "^1.8.3",
     "browserify": "^8.0.3",
     "clean-css": "^2.2.23",
+    "es6ify": "^1.6.0",
     "gulp": "^3.8.10",
     "gulp-autoprefixer": "^2.0.0",
     "gulp-bless": "^3.0.1",

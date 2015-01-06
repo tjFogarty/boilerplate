@@ -8,7 +8,7 @@
 
 var config = {
   // Used for BrowserSync
-  local_url: 'ww-etb.dev',
+  local_url: 'boilerplate.dev',
 
   // Assets
   bower_file: 'bower.json',

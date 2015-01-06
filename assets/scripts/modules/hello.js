@@ -2,4 +2,6 @@
 
 'use strict';
 
-console.log('Hello, from hello.js!');
+var log = msg => console.log(msg);
+
+log('Hello, from hello.js!');

@@ -6,10 +6,10 @@ var gulp = require('gulp');
 
 gulp.task('wiredep', function () {
   var wiredep = require('wiredep').stream;
-  gulp.src('admin/templates/default_site/layouts.group/*.html')
+  gulp.src('index.php')
     .pipe(wiredep({
       directory: 'assets/lib',
-      ignorePath: '../../../..',
+      ignorePath: '',
       exclude: ['foundation', 'modernizr']
-    })).pipe(gulp.dest('admin/templates/default_site/layouts.group/'));
+    })).pipe(gulp.dest('index.php'));
 });
