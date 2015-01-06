@@ -23,4 +23,4 @@ class Person {
 
 let me = new Person('TJ', 'Fogarty');
 
-log('Hello, ' + me.toString() + ' from hello.js!');
+log('Hello, ' + me.toString() + ' from hello.js!'); 

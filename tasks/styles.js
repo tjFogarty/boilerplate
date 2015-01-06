@@ -16,7 +16,7 @@ gulp.task('styles', function () {
     .pipe(sass({
       errLogToConsole: false,
       onError: function(err) {
-          return notify().write(err);
+        console.log(err);
       }
     }))
     .pipe(autoprefixer('last 2 versions'))

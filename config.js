@@ -17,7 +17,7 @@ var config = {
 
   js_entry_file: './assets/scripts/main.js', // why is the dot there? I don't know, but it works
   js_dir: 'assets/scripts/', // where your scripts are located
-  js_watch: 'assets/scripts/**/*.js', // what files to watch to trigger the scripts task
+  js_watch: ['assets/scripts/modules/*.js', 'assets/scripts/main.js'], // what files to watch to trigger the scripts task
 
   scss_entry_file: 'assets/scss/main.scss',
   scss_watch: 'assets/scss/**/*.scss', // what files to watch to trigger the styles task

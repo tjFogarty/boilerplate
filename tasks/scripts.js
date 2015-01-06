@@ -16,6 +16,11 @@ gulp.task('scripts', function () {
     .transform(es6ify)
     .add(config.js_entry_file)
     .bundle()
+    .on('error', function (err) {
+      console.log(err.message);
+
+      this.emit('end');
+    })
     .pipe(source('main.bundle.js'))
     .pipe(gulp.dest(config.js_dir))
     .pipe(reload({stream:true}))
