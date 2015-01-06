@@ -1,0 +1,18 @@
+{
+  "name": "Boilerplate",
+  "version": "0.0.1",
+  "authors": [
+    "TJ Fogarty <tj@emagine.ie>"
+  ],
+  "description": "Boilerplate for web projects",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/lib"
+    "test",
+    "tests"
+  ]
+}

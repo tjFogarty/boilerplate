@@ -1,0 +1,105 @@
+// *************************************
+//
+//   Helpers
+//   -> Placeholders, mixins etc...
+//
+// *************************************
+
+// ----- Lists ----- //
+@mixin basic-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin inline-list() {
+  @include basic-list;
+
+  > li {
+    display: inline-block;
+  }
+}
+
+// ----- Flexbox ----- //
+@mixin display-flex() {
+  display: flex;
+}
+
+@mixin display-flex-row() {
+  @include display-flex;
+  flex-direction: row;
+
+  > * {
+    flex-grow: 1;
+  }
+}
+
+// ----- Buttons ----- //
+
+@mixin button-base() {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: none;
+  transition: all ease 0.3s;
+  color: #fff;
+  max-height: 32px;
+
+  &:hover {
+    line-height: 9em;
+  }
+
+  &:before {
+    @extend %text--center;
+    content: attr(data-hover-text);
+    position: absolute;
+    top: -56px;
+    left: 0;
+    width: 100%;
+  }
+}
+
+@mixin zero {
+	margin: 0;
+	padding: 0;
+}
+// ----- Clearfix ----- //
+@mixin clearfix {
+  &:before, &:after { content: " "; display: table; }
+  &:after { clear: both; }
+}
+
+%clearfix {
+  @include clearfix;
+}
+
+// ----- Placeholder ----- //
+%text--center {
+  text-align: center;
+}
+
+%text--left {
+  text-align: left;
+}
+
+%text--right {
+  text-align: right;
+}
+
+%display--block {
+  display: block;
+}
+
+%display--inline-block {
+  display: inline-block;
+}
+
+%display--inline {
+  display: inline;
+}
+
+%display--none {
+  display: none;
+}

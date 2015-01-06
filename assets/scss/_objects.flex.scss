@@ -1,0 +1,14 @@
+// *************************************
+//
+//   Flexbox layouts
+//
+// *************************************
+
+.flex-container {
+  @include display-flex;
+}
+
+// ----- A nice even row - usually for main navigation on desktop ----- //
+.flex-container--row {
+  @include display-flex-row;
+}

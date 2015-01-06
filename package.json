@@ -1,0 +1,23 @@
+{
+  "name": "Boilerplate",
+  "version": "0.0.1",
+  "description": "Boilerplate for web projects",
+  "author": "TJ Fogarty <tj@emagine.ie>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^1.8.3",
+    "browserify": "^8.0.3",
+    "clean-css": "^2.2.23",
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-bless": "^3.0.1",
+    "gulp-notify": "^2.1.0",
+    "gulp-pixrem": "^0.1.2",
+    "gulp-sass": "^1.2.4",
+    "gulp-size": "^1.2.0",
+    "penthouse": "^0.2.51",
+    "require-dir": "^0.1.0",
+    "vinyl-source-stream": "^1.0.0",
+    "wiredep": "^2.2.2"
+  }
+}
