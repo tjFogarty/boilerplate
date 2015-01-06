@@ -4,6 +4,13 @@ You can fire this into a static or CMS based project. Configuration changes are 
 
 Gulp tasks are broken into files located in the tasks folder. Code will change with the release of Gulp 4.0.
 
+This makes heavy use of awesome things done by other people:
+
+* [Normalize.css](http://necolas.github.io/normalize.css/)
+* [HTML5 Boilerplate](https://github.com/h5bp)
+* [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4)
+* [BEM](http://bem.info/) (For a clear explanation, see Extra Material below)
+
 ## Files
 
 * `.bowerrc` - Sets the location of your Bower dependencies

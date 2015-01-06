@@ -16,17 +16,17 @@ var config = {
   workfiles_watch: '**/*.php', // ExpressionEngine files
 
   js_entry_file: './assets/scripts/main.js', // why is the dot there? I don't know, but it works
-  js_dir: 'assets/scripts/',
-  js_watch: 'assets/scripts/**/*.js',
+  js_dir: 'assets/scripts/', // where your scripts are located
+  js_watch: 'assets/scripts/**/*.js', // what files to watch to trigger the scripts task
 
   scss_entry_file: 'assets/scss/main.scss',
-  scss_watch: 'assets/scss/**/*.scss',
-  css_dir: 'assets/css',
+  scss_watch: 'assets/scss/**/*.scss', // what files to watch to trigger the styles task
+  css_dir: 'assets/css', 
   css_entry_file: 'assets/css/main.css',
-  critical_css: 'critical.php',
+  critical_css: 'critical.php', // will contain critical css that you can include
 
-  wiredep_file: './index.php',
-  wiredep_dest: './'
+  wiredep_file: './index.php', // looks through given file(s) for bower comments
+  wiredep_dest: './' // where to spit out the wiredep'd file(s)
 
 };
 
