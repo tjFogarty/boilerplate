@@ -1,13 +1,10 @@
 // *************************************
 //
-//   Lists
+//  Page
 //
 // *************************************
 
-.list--basic {
-  @include basic-list;
-}
-
-.list--inline {
-  @include inline-list;
+html {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
 }

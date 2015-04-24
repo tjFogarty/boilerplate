@@ -6,50 +6,54 @@
 // *************************************
 
 // -------------------------------------
-//   Settings
-// -------------------------------------
-
-@import "settings.colours";
-@import "settings.fonts";
-@import "settings.vars";
-
-// -------------------------------------
-//   Trumps - vendor vars, or use of !important
-// -------------------------------------
-
-@import "trumps.overrides";
-
-// -------------------------------------
 //   Vendor
 // -------------------------------------
-
 
 // -------------------------------------
 //   Tools - Mixins, functions...
 // -------------------------------------
 
-@import "tools.helpers";
+@import "tools.clearfix";
+
+// -------------------------------------
+//   Settings
+// -------------------------------------
+
+@import "settings.defaults";
 
 // -------------------------------------
 //   Generic - Reset
 // -------------------------------------
 
-@import "generic.normalize";
+@import "generic.reset";
 @import "generic.box-sizing";
+@import "generic.normalize";
 
 // -------------------------------------
-//   Objects - Design patters, no styles
-// -------------------------------------
-@import "objects.grid";
-@import "objects.flex";
-@import "objects.lists";
-
-// -------------------------------------
-//   Base - Base styles
+//   Elements - Base styles, no classes
 // -------------------------------------
 
-@import "base.type-selectors";
+@import "elements.page";
+@import "elements.headings";
+@import "elements.paragraphs";
+@import "elements.links";
+@import "elements.forms";
+@import "elements.inputs";
+
+// -------------------------------------
+//   Objects - Design patterns
+// -------------------------------------
+
+@import "objects.pack";
+@import "objects.list-bare";
 
 // -------------------------------------
 //   Components - UI Styles
 // -------------------------------------
+
+
+// -------------------------------------
+//   Trumps
+// -------------------------------------
+
+@import "trumps.headings";
