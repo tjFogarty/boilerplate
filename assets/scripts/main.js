@@ -3,7 +3,8 @@
 
 'use strict';
 
-$(document).ready(function () { 
+$(document).ready(function () {
   // `require` your modules here
   require('./modules/hello');
+  require('./modules/foundation');
 });

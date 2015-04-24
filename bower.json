@@ -6,5 +6,7 @@
   ],
   "description": "Boilerplate for web projects",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "foundation": "~5.5.1"
+  }
 }

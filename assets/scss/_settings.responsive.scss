@@ -1,0 +1,18 @@
+// *************************************
+//
+//  Responsive settings
+//    -> Pulled from another project - thanks Gary
+//
+// *************************************
+
+@if $use-custom-media-queries == true {
+  $medium-range: (55.063em, 64em); /* 881px, 1024px */
+  $phablet-range: (40.063em, 55em);
+  $xlarge-range: (90.063em, 118em);
+  $xxlarge-range: (118.063em);
+
+  meta.phablet {
+    font-family: "/only screen and (min-width: 40.063em) and (max-width: 55em)/";
+    width: 40.063em;
+  }
+}

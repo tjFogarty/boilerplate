@@ -1,33 +1,13 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Boilerplate</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php include('_header.php'); ?>
 
-    <link rel="stylesheet" href="/assets/css/main.css">
-  </head>
-  <body>
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+<div class="row">
 
-    <!-- bower:js -->
-    <script src="assets/lib/jquery/dist/jquery.js"></script>
-    <!-- endbower -->
+  <div class="columns small-12">
 
-    <script src="/assets/scripts/main.bundle.js"></script>
+    <h2>Index</h2>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-    </script>
-  </body>
-</html>
+  </div>
+  
+</div>
+
+<?php include('_footer.php'); ?>
