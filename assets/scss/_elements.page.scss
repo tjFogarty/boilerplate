@@ -1,11 +1,22 @@
 // *************************************
 //
 //  Page
+//    -> Some sensible defaults taken from inuit.css
 //
 // *************************************
+
+/*
+ * High-level global styles, usually styles targeting the html or body tag
+ */
 
 html {
   font-size: $base-font-size;
   line-height: $base-line-height;
   font-family: $base-font-family;
+  color: $base-text-colour;
+  overflow-y: scroll; //  Force scrollbars to always be visible to prevent awkward ‘jumps’ when navigating between pages that do/do not have enough content to produce scrollbars naturally.
+  min-height: 100%; // Ensure the page always fills at least the entire height of the viewport
+  text-size-adjust: 100%; // Prevent certain mobile browsers from automatically zooming fonts.
+  -moz-osx-font-smoothing: grayscale; // Fonts on OSX will look more consistent with other systems that do not render text using sub-pixel anti-aliasing.
+  -webkit-font-smoothing: antialiased;
 }
