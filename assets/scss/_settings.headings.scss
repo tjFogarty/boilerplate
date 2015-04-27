@@ -1,0 +1,77 @@
+// *************************************
+//
+//   Headings
+//   -> Settings for font-size, line-height etc...
+//
+// *************************************
+
+/**
+ * These are pulled in and assigned based on Foundations breakpoints
+ * See tools.mixins to see how this is implemented
+ */
+
+$h1: (
+  base-font-size: 5.063em,
+  base-line-height: 1.2,
+
+  tablet-font-size:  5.063em,
+  tablet-line-height: 1.2,
+
+  desktop-font-size:  5.063em,
+  desktop-line-height: 1.2
+);
+
+$h2: (
+  base-font-size: 3.375em,
+  base-line-height: 1.6,
+
+  tablet-font-size: 3.375em,
+  tablet-line-height: 1.5,
+
+  desktop-font-size: 3.375em,
+  desktop-line-height: 1.5
+);
+
+$h3: (
+  base-font-size: 2.25em,
+  base-line-height: 1.6,
+
+  tablet-font-size: 2.25em,
+  tablet-line-height: 1.5,
+
+  desktop-font-size: 2.25em,
+  desktop-line-height: 1.5
+);
+
+$h4: (
+  base-font-size: 1.5em,
+  base-line-height: 1.6,
+
+  tablet-font-size: 1.5em,
+  tablet-line-height: 1.5,
+
+  desktop-font-size: 1.5em,
+  desktop-line-height: 1.5
+);
+
+$h5: (
+  base-font-size: 1em,
+  base-line-height: 1.6,
+
+  tablet-font-size: 1em,
+  tablet-line-height: 1.5,
+
+  desktop-font-size: 1em,
+  desktop-line-height: 1.5
+);
+
+$h6: (
+  base-font-size: 0.667em,
+  base-line-height: 1.6,
+
+  tablet-font-size: 0.667em,
+  tablet-line-height: 1.5,
+
+  desktop-font-size: 0.667em,
+  desktop-line-height: 1.5
+);

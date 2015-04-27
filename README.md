@@ -1,8 +1,11 @@
 # Boilerplate
 
+## TL;DR
+`npm install && gulp install` then run `gulp` to run the default task which is the same as running `gulp watch` in this case.
+
 You can fire this into a static or CMS based project. Configuration changes are made in `config.js` which have already been given some default values. First thing to change would be the local_url.
 
-Gulp tasks are broken into files located in the tasks folder. Code will change with the release of Gulp 4.0.
+Gulp tasks are broken into files located in the tasks folder.
 
 This makes heavy use of awesome things done by other people:
 

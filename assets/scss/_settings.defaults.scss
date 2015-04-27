@@ -5,17 +5,8 @@
 // *************************************
 
 $base-font-size: 16px;
-$base-line-height: 1.5;
+$base-line-height: 1.45;
 $base-text-colour: #333;
 $base-font-family: 'Open Sans', 'Arial', 'sans-serif';
+$base-heading-margins: 0 0 0.5em;
 $base-heading-font-family: $base-font-family;
-
-$h1-font-size: 30px;
-$h2-font-size: 28px;
-$h3-font-size: 25px;
-$h4-font-size: 22px;
-$h5-font-size: 20px;
-$h6-font-size: 18px;
-
-// Enables your custom rules placed within _settings.responsive.scss
-$use-custom-media-queries: false;

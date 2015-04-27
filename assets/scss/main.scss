@@ -10,13 +10,15 @@
 // -------------------------------------
 
 @import "tools.clearfix";
+@import "tools.functions";
+@import "tools.mixins";
 
 // -------------------------------------
 //   Settings
 // -------------------------------------
 
 @import "settings.defaults";
-@import "settings.responsive";
+@import "settings.headings";
 @import "settings.foundation";
 
 // -------------------------------------
@@ -30,9 +32,9 @@
 //   Generic - Reset
 // -------------------------------------
 
-@import "generic.reset";
-@import "generic.box-sizing";
 @import "generic.normalize";
+@import "generic.box-sizing";
+@import "generic.reset";
 
 // -------------------------------------
 //   Elements - Base styles, no classes

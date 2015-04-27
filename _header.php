@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="/assets/css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   </head>
   <body>
 
@@ -15,18 +16,55 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <header>
+    <header role="banner c-site-header">
 
       <div class="row">
 
         <div class="columns small-12">
 
-          <h1>Boilerplate</h1>
+          <div class="c-site-header__content">
+
+            <h1 class="c-site-header__title">Boilerplate</h1>
+
+          </div>
 
         </div>
-        
+
       </div>
 
     </header>
 
     <main role="main">
+
+      <div class="row">
+
+        <div class="columns small-12 medium-3 large-4">
+
+          <aside class="c-sidebar">
+            <nav class="c-nav" role="navigation">
+
+              <ul class="c-nav__list">
+
+                <li class="c-nav__item">
+                  <a href="#" class="c-nav__link">Link</a>
+                </li>
+
+                <li class="c-nav__item">
+                  <a href="#" class="c-nav__link">Link</a>
+                </li>
+
+                <li class="c-nav__item">
+                  <a href="#" class="c-nav__link">Link</a>
+                </li>
+
+                <li class="c-nav__item">
+                  <a href="#" class="c-nav__link">Link</a>
+                </li>
+
+              </ul>
+
+            </nav>
+
+          </aside>
+
+        </div>

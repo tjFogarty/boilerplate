@@ -1,4 +1,4 @@
-
+  </div> <!-- /.row -->
 </main>
 <!-- bower:js -->
 <script src="assets/lib/jquery/dist/jquery.js"></script>
