@@ -1,7 +1,7 @@
 <?php include('_header.php'); ?>
 
 
-  <div class="columns small-12 medium-9 large-8">
+  <div class="columns small-12 medium-9">
 
     <article class="c-article">
 

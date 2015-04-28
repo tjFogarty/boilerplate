@@ -1,5 +1,23 @@
   </div> <!-- /.row -->
+  
 </main>
+
+<footer class="c-site-footer" role="contentinfo">
+
+  <div class="row">
+
+    <div class="column small-12">
+
+    <p>
+      &copy; 2015
+    </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
 <!-- bower:js -->
 <script src="assets/lib/jquery/dist/jquery.js"></script>
 <script src="assets/lib/fastclick/lib/fastclick.js"></script>

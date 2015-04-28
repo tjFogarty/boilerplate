@@ -16,7 +16,7 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <header role="banner c-site-header">
+    <header class="c-site-header" role="banner">
 
       <div class="row">
 
@@ -38,7 +38,7 @@
 
       <div class="row">
 
-        <div class="columns small-12 medium-3 large-4">
+        <div class="columns small-12 medium-3">
 
           <aside class="c-sidebar">
             <nav class="c-nav" role="navigation">

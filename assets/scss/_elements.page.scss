@@ -20,3 +20,13 @@ html {
   -moz-osx-font-smoothing: grayscale; // Fonts on OSX will look more consistent with other systems that do not render text using sub-pixel anti-aliasing.
   -webkit-font-smoothing: antialiased;
 }
+
+::selection {
+  background: $primary-colour;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: $primary-colour;
+  color: #fff;
+}

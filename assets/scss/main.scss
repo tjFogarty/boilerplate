@@ -13,13 +13,16 @@
 @import "tools.functions";
 @import "tools.mixins";
 
+
 // -------------------------------------
 //   Settings
 // -------------------------------------
 
 @import "settings.defaults";
+@import "settings.colours";
 @import "settings.headings";
 @import "settings.foundation";
+
 
 // -------------------------------------
 //   Vendor
@@ -58,6 +61,7 @@
 //   Components - UI Styles
 // -------------------------------------
 
+@import "components.articles";
 
 // -------------------------------------
 //   Trumps
