@@ -1,5 +1,5 @@
   </div> <!-- /.row -->
-  
+
 </main>
 
 <footer class="c-site-footer" role="contentinfo">
@@ -24,6 +24,7 @@
 <script src="assets/lib/jquery.cookie/jquery.cookie.js"></script>
 <script src="assets/lib/jquery-placeholder/jquery.placeholder.js"></script>
 <script src="assets/lib/foundation/js/foundation.js"></script>
+<script src="assets/lib/gsap/src/uncompressed/TweenMax.js"></script>
 <!-- endbower -->
 
 <script src="/assets/scripts/main.bundle.js"></script>

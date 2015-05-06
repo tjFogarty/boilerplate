@@ -26,7 +26,7 @@ var config = {
   css_entry_file: 'assets/css/main.css',
   critical_css: 'critical.php', // will contain critical css that you can include
 
-  wiredep_file: './index.php', // looks through given file(s) for bower comments
+  wiredep_file: './_footer.php', // looks through given file(s) for bower comments
   wiredep_dest: './' // where to spit out the wiredep'd file(s)
 
 };
