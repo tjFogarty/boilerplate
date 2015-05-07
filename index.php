@@ -11,8 +11,8 @@
 
       <section class="c-article__block">
 
-        <a class="js-dropdown-toggle" data-em-dropdown-id="test">Click me</a>
-        <a class="js-dropdown-toggle" data-em-dropdown-id="another">Or me</a>
+        <a class="js-jh-toggle" data-jh-id="test">Click me</a>
+        <a class="js-jh-toggle" data-jh-id="another">Or me</a>
 
         <div id="test">
           <p>

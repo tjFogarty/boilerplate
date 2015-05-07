@@ -7,7 +7,7 @@ $(document).ready(function () {
   // `require` your modules here
   require('./modules/hello');
   require('./modules/foundation');
-  require('./modules/em.dropdown');
+  require('./modules/jquery.jazzhands');
 
-  $('.js-dropdown-toggle').emDropdown();
+  $('.js-jh-toggle').jazzHands();
 });
