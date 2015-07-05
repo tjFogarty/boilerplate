@@ -3,11 +3,12 @@
 
 'use strict';
 
+var utils = require('./modules/utils');
+
 $(document).ready(function () {
   // `require` your modules here
-  require('./modules/hello');
-  require('./modules/foundation');
-  require('./modules/jquery.jazzhands');
-
-  $('.js-jh-toggle').jazzHands();
+  if (utils.isModernBrowser) {
+    require('./modules/hello');
+    require('./modules/foundation');
+  }
 });

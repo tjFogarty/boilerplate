@@ -12,13 +12,8 @@ var notify = require('gulp-notify');
 var config = require('../config');
 
 gulp.task('styles', function () {
-  return gulp.src(config.scss_entry_file)
-    .pipe(sass({
-      errLogToConsole: false,
-      onError: function(err) {
-        console.log(err);
-      }
-    }))
+  gulp.src(config.scss_entry_file)
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest(config.css_dir))
     .pipe(reload({stream:true}))
