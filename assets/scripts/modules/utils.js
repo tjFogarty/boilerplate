@@ -3,6 +3,6 @@
 
 'use strict';
 
-modules.export = {
+module.export = {
   isModernBrowser: 'visibilityState' in document
 };
