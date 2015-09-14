@@ -6,6 +6,7 @@ var gulp = require('gulp');
 var browserify = require('browserify');
 var gutil = require('gulp-util');
 var watchify = require('watchify');
+var babelify = require('babelify');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var notify = require('gulp-notify');
@@ -18,10 +19,13 @@ var customOpts = {
   debug: true
 };
 var opts = assign({}, watchify.args, customOpts);
-var b = watchify(browserify(opts)); 
+var b = watchify(browserify(opts));
 
 // add transformations here
-// i.e. b.transform(coffeeify);
+
+if (config.js_es6) {
+  b.transform(babelify);
+}
 
 function bundle() {
   return b.bundle()

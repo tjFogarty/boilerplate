@@ -1,13 +1,12 @@
 {
-  "name": "Boilerplate",
-  "version": "0.0.3",
+  "name": "boilerplate",
+  "version": "1.0.0",
   "authors": [
-    "TJ Fogarty <tj@emagine.ie>"
+    "Emagine Media"
   ],
   "description": "Boilerplate for web projects",
   "license": "MIT",
   "dependencies": {
-    "foundation": "~5.5.1",
-    "gsap": "~1.16.1"
+    "foundation": "~5.5.2"
   }
 }

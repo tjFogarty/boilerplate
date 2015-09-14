@@ -1,14 +1,13 @@
-/* globals require */
-/* jshint node:true */
-
 'use strict';
 
-var utils = require('./modules/utils');
+import {Greetings} from './modules/greetings';
 
-$(document).ready(function () {
-  // `require` your modules here
-  if (utils.isModernBrowser) {
-    require('./modules/hello');
-    require('./modules/foundation');
-  }
-});
+;(function($) {
+
+  $(document).ready(function () {
+
+    Greetings.to('developer');
+
+  });
+
+}(jQuery));
