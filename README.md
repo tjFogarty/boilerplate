@@ -1,7 +1,7 @@
 # Boilerplate
 
 ## TL;DR
-`npm install && gulp install` then run `gulp` to run the default task which is the same as running `gulp watch` in this case.
+`npm install && gulp install` then run `gulp` to run the default task which will compile assets. `gulp watch` will run browsersync and watch assets for changes.
 
 You can fire this into a static or CMS based project. Configuration changes are made in `config.js` which have already been given some default values. First thing to change would be the local_url.
 
