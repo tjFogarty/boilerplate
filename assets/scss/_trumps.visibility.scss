@@ -1,0 +1,42 @@
+// *************************************
+//
+//  Visibility
+//
+// *************************************
+
+.u-show-for-sr {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/**
+ * Generates responsive hidden, visible and screen reader classes
+ */
+@each $bpname, $bp in $breakpoints {
+  @media #{$bp} {
+    .u-hidden\@#{$bpname} {
+      display: none;
+    }
+
+    .u-visible\@#{$bpname} {
+      display: block;
+    }
+
+    .u-show-for-sr\@#{$bpname} {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+  }
+}

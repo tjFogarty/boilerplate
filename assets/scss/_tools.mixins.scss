@@ -21,3 +21,35 @@
     line-height: #{map-get($heading, desktop-line-height)};
   }
 }
+
+/**
+ * Flex helper mixin
+ * @param $direction       - row | row-reverse | column | column-reverse
+ * @param $wrap            - nowrap | wrap | wrap-reverse
+ * @param $justify-content - flex-start | flex-end | center | space-between | space-around
+ * @param $align-items     - flex-start | flex-end | center | stretch | baseline
+ * @param $align-content   - flex-start | flex-end | center | stretch | space-between | space-around
+ */
+@mixin flex($direction: '', $wrap: '', $justify-content: '', $align-items: '', $align-content: '') {
+  display: flex;
+
+  @if $direction != '' {
+    flex-direction: unquote($direction);
+  }
+
+  @if $wrap != '' {
+    flex-wrap: unquote($wrap);
+  }
+
+  @if $justify-content != '' {
+    justify-content: unquote($justify-content);
+  }
+
+  @if $align-items != '' {
+    align-items: unquote($align-items);
+  }
+
+  @if $align-content != '' {
+    align-content: unquote($align-content);
+  }
+}

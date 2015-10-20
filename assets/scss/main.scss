@@ -54,16 +54,18 @@
 
 @import "objects.pack";
 @import "objects.list-bare";
+@import "objects.flex";
+@import "objects.layout";
 
 // -------------------------------------
 //   Components - UI Styles
 // -------------------------------------
-
-@import "components.articles";
 
 // -------------------------------------
 //   Trumps
 // -------------------------------------
 
 @import "trumps.headings";
+@import "trumps.responsive-widths";
+@import "trumps.visibility";
 @import "trumps.print";

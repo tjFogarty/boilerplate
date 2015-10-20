@@ -1,0 +1,19 @@
+// *************************************
+//
+//  Responsive Widths
+//
+// *************************************
+
+$width-columns: 12;
+
+@each $bpname, $bp in $breakpoints {
+  @media #{$bp} {
+
+    @for $i from 1 through $width-columns {
+      .u-#{$i}-#{$width-columns}\@#{$bpname} {
+        width: ($i / $width-columns) * 100%;
+      }
+    }
+
+  }
+}

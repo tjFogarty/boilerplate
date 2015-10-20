@@ -4,17 +4,28 @@
 //
 // *************************************
 
+$include-html-global-classes: false;
+$include-html-visibility-classes: true;
+$include-html-type-classes: false;
+$include-accessibility-classes: true;
+$font-family-sans-serif: 'Arial', 'sans-serif';
+$include-table-visibility-classes: false;
+$include-legacy-visibility-classes: false;
+$include-html-grid-classes: true; // Change to false to not include grid classes
 $include-html-global-classes: false; // Prevent Foundation from altering our base page elements with it's own styles
+
 
 /**
  * Set up the grid
  */
-$row-width: 1000px;
-$column-gutter: 15px;
+$row-width: 1223px;
+$column-gutter: 28px;
 $total-columns: 12;
 
 /**
  * Default breakpoints
+ *
+ * Custom breakpoint in nav file
  */
 $small-range: (0em, 40em);
 $medium-range: (40.063em, 64em);
@@ -41,3 +52,12 @@ $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max
 
 $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
 $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
+
+$breakpoints: (
+  'small-up': $small-up,
+  'small-only': $small-only,
+  'medium-up': $medium-up,
+  'medium-only': $medium-only,
+  'large-up': $large-up,
+  'large-only': $large-only
+);
