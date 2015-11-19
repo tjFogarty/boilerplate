@@ -11,12 +11,12 @@
   font-size: #{map-get($heading, base-font-size)};
   line-height: #{map-get($heading, base-line-height)};
 
-  @media #{$medium-up} {
+  @include breakpoint(medium) {
     font-size: #{map-get($heading, tablet-font-size)};
     line-height: #{map-get($heading, tablet-line-height)};
   }
 
-  @media #{$large-up} {
+  @include breakpoint(large) {
     font-size: #{map-get($heading, desktop-font-size)};
     line-height: #{map-get($heading, desktop-line-height)};
   }

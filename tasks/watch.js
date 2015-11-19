@@ -12,5 +12,4 @@ gulp.task('watch', ['serve'], function () {
     gulp.watch([config.workfiles_watch], reload);
     gulp.watch(config.scss_watch, ['styles']);
     gulp.watch(config.js_watch, ['scripts']);
-    gulp.watch(config.bower_file, ['wiredep']);
 });

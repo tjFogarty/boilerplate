@@ -18,14 +18,6 @@
 
 </footer>
 
-<!-- bower:js -->
-<script src="assets/lib/jquery/dist/jquery.js"></script>
-<script src="assets/lib/fastclick/lib/fastclick.js"></script>
-<script src="assets/lib/jquery.cookie/jquery.cookie.js"></script>
-<script src="assets/lib/jquery-placeholder/jquery.placeholder.js"></script>
-<script src="assets/lib/foundation/js/foundation.js"></script>
-<!-- endbower -->
-
 <script src="/assets/scripts/main.bundle.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

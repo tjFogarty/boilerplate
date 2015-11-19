@@ -19,7 +19,7 @@
  * Generates responsive hidden, visible and screen reader classes
  */
 @each $bpname, $bp in $breakpoints {
-  @media #{$bp} {
+  @include breakpoint($bpname) {
     .u-hidden\@#{$bpname} {
       display: none;
     }

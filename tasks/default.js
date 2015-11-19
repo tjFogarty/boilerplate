@@ -5,4 +5,4 @@
 
 var gulp = require('gulp');
 
-gulp.task('default', ['scripts', 'styles', 'wiredep']);
+gulp.task('default', ['scripts', 'styles']);

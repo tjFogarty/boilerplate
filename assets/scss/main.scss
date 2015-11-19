@@ -26,8 +26,8 @@
 //   Vendor
 // -------------------------------------
 
-@import "../lib/foundation/scss/foundation/components/grid";
-
+@import "../../node_modules/foundation-sites/scss/foundation";
+@import "../../node_modules/foundation-sites/scss/components/tabs";
 
 // -------------------------------------
 //   Generic - Reset
@@ -60,6 +60,8 @@
 // -------------------------------------
 //   Components - UI Styles
 // -------------------------------------
+
+@import "components.tabs";
 
 // -------------------------------------
 //   Trumps

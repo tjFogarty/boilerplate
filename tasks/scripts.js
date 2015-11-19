@@ -23,8 +23,8 @@ var b = watchify(browserify(opts));
 
 // add transformations here
 
-if (config.js_es6) {
-  b.transform(babelify);
+if (config.js_esnext) {
+  b.transform(babelify, {presets: ['es2015']});
 }
 
 function bundle() {
@@ -36,6 +36,6 @@ function bundle() {
     .pipe(notify('JS compilation complete.'));
 }
 
-gulp.task('scripts', bundle); // so you can run `gulp js` to build the file
+gulp.task('scripts', bundle);
 b.on('update', bundle); // on any dep update, runs the bundler
 b.on('log', gutil.log); // output build logs to terminal

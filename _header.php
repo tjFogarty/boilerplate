@@ -18,9 +18,9 @@
 
     <header class="c-site-header" role="banner">
 
-      <div class="row">
+      <div class="o-layout">
 
-        <div class="columns small-12">
+        <div class="o-layout__item u-12-12@small">
 
           <div class="c-site-header__content">
 
@@ -38,7 +38,7 @@
 
       <div class="row">
 
-        <div class="columns small-12 medium-3">
+        <div class="o-layout__item u-12-12@small u-4-12@medium">
 
           <aside class="c-sidebar">
             <nav class="c-nav" role="navigation">

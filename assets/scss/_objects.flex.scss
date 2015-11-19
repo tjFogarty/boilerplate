@@ -4,10 +4,10 @@
 //
 // *************************************
 
-// <div class="o-flex--column@small-only o-flex@medium-up">
+// <div class="o-flex--column@small o-flex@medium">
 
 @each $bpname, $bp in $breakpoints {
-  @media #{$bp} {
+  @include breakpoint($bpname) {
     .o-flex\@#{$bpname} {
       @include flex;
     }

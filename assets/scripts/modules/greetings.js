@@ -1,7 +1,7 @@
 'use strict';
 
-export var Greetings = {
+export let Greetings = {
   to(subject = 'creator') {
-    console.log(`Greetings, ${subject}`);
+    console.log(`Greetings, ${subject}!`);
   }
 };
