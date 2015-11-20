@@ -3,18 +3,45 @@
 //   Style manifest file
 //   -> Author: Emagine Media
 //
+//   The general idea is to increase in specificity
+//   as we go further down the list.
+//
+//   1. Settings
+//      -> Variables, like font sizes, colours...
+//
+//   2. Tools
+//      -> Mixins and functions, no styles yet
+//
+//   3. Required Vendor files
+//      -> We're breaking the rules here a bit
+//         but this is a necessary evil.
+//         Some of our styles might require external libraries.
+//
+//   4. Generic - nothing too specific
+//      -> Base level resets, box sizing
+//
+//   5. Elements
+//      -> Target individual elements, no classes just type selectors
+//
+//   6. Objects
+//      -> Design patterns, not style-specific
+//         Examples would be grids, or layout patterns
+//
+//   7. Components
+//      -> Ok, you can start styling the UI now
+//
+//   8. Themes
+//      -> Completely optional - theme your components
+//
+//   9. Trumps/Utilities
+//      -> Overrides and helpers
+//         e.g. text-aligns, widths, floats, display...
+//
 // *************************************
 
-// -------------------------------------
-//   Tools - Mixins, functions...
-// -------------------------------------
-
-@import "tools.clearfix";
-@import "tools.functions";
-@import "tools.mixins";
 
 // -------------------------------------
-//   Settings
+//   1. Settings
 // -------------------------------------
 
 @import "settings.defaults";
@@ -23,14 +50,22 @@
 @import "settings.foundation";
 
 // -------------------------------------
-//   Vendor
+//   2. Tools - Mixins, functions...
+// -------------------------------------
+
+@import "tools.clearfix";
+@import "tools.functions";
+@import "tools.mixins";
+
+// -------------------------------------
+//   3. Vendor
 // -------------------------------------
 
 @import "../../node_modules/foundation-sites/scss/foundation";
 @import "../../node_modules/foundation-sites/scss/components/tabs";
 
 // -------------------------------------
-//   Generic - Reset
+//   4. Generic
 // -------------------------------------
 
 @import "generic.normalize";
@@ -38,7 +73,7 @@
 @import "generic.reset";
 
 // -------------------------------------
-//   Elements - Base styles, no classes
+//   5. Elements - Base styles, no classes
 // -------------------------------------
 
 @import "elements.page";
@@ -49,7 +84,7 @@
 @import "elements.inputs";
 
 // -------------------------------------
-//   Objects - Design patterns
+//   6. Objects - Design patterns
 // -------------------------------------
 
 @import "objects.pack";
@@ -58,13 +93,17 @@
 @import "objects.layout";
 
 // -------------------------------------
-//   Components - UI Styles
+//   7. Components - UI Styles
 // -------------------------------------
 
 @import "components.tabs";
 
 // -------------------------------------
-//   Trumps
+//   8. Themes
+// -------------------------------------
+
+// -------------------------------------
+//   9. Trumps
 // -------------------------------------
 
 @import "trumps.headings";

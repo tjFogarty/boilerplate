@@ -1,7 +1,5 @@
-'use strict';
-
 export let Greetings = {
-  to(subject = 'creator') {
+  to(subject = 'toilet') {
     console.log(`Greetings, ${subject}!`);
-  }
+  } 
 };
