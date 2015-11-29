@@ -5,13 +5,10 @@
 // *************************************
 
 .u-show-for-sr {
-  border: 0;
-  clip: rect(0 0 0 0);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
-  margin: -1px;
   overflow: hidden;
-  padding: 0;
-  position: absolute;
+  position: absolute !important;
   width: 1px;
 }
 
@@ -29,13 +26,10 @@
     }
 
     .u-show-for-sr\@#{$bpname} {
-      border: 0;
-      clip: rect(0 0 0 0);
+      clip: rect(1px, 1px, 1px, 1px);
       height: 1px;
-      margin: -1px;
       overflow: hidden;
-      padding: 0;
-      position: absolute;
+      position: absolute !important;
       width: 1px;
     }
   }
