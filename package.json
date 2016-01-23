@@ -8,6 +8,7 @@
     "babelify": "^7.2.0",
     "browser-sync": "^2.11.1",
     "eslint": "^1.10.3",
+    "node-notifier": "^4.4.0",
     "watchify": "^3.7.0"
   },
   "scripts": {
@@ -15,11 +16,13 @@
     "build": "npm run compile",
     "compile": "npm run compile:js | npm run compile:scss",
     "compile:js": "node_modules/.bin/browserify src/scripts/main.js -o assets/scripts/main.bundle.js -t [ babelify --presets [ es2015 ] ]",
-    "compile:scss": "node_modules/.bin/node-sass src/scss/main.scss assets/css/main.css",
+    "compile:scss": "node_modules/.bin/node-sass src/scss/main.scss assets/css/main.css & npm run notify:scss",
     "watch:scss": "echo 'Watching files...' && node_modules/.bin/nodemon -e scss -x \"npm run compile:scss\"",
     "watch:js": "node_modules/.bin/watchify src/scripts/main.js -o assets/scripts/main.bundle.js -t [ babelify --presets [ es2015 ] ] -dv",
-    "reload": "node_modules/.bin/browser-sync reload --url https://your-url.dev --files='assets/*'",
-    "watch": "npm run watch:scss & npm run watch:js & npm run reload"
+    "reload": "node_modules/.bin/browser-sync reload --url http://localhost:8000 --files='assets/*'",
+    "watch": "npm run watch:scss & npm run watch:js & npm run reload",
+    "notify:js": "node_modules/.bin/notify -t 'JavaScript' -m 'JS Compiled'",
+    "notify:scss": "node_modules/.bin/notify -t 'Sass' -m 'Sass Compiled'"
   },
   "dependencies": {
     "foundation-sites": "^6.1.1"

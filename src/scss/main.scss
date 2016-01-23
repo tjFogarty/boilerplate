@@ -60,21 +60,19 @@
 @import "tools.mixins";
 // Though this is a vendor dependency, we need this loaded first in order to use it
 @import "../../node_modules/foundation-sites/scss/foundation";
-
-// -------------------------------------
-//   3. Vendor
-// -------------------------------------
+@include foundation-global-styles;
+@include foundation-typography;
 
 
 // -------------------------------------
-//   4. Generic
+//   3. Generic
 // -------------------------------------
 
 @import "generic.box-sizing";
 @import "generic.reset";
 
 // -------------------------------------
-//   5. Elements - Base styles, no classes
+//   4. Elements - Base styles, no classes
 // -------------------------------------
 
 @import "elements.page";
@@ -85,7 +83,7 @@
 @import "elements.inputs";
 
 // -------------------------------------
-//   6. Objects - Design patterns
+//   5. Objects - Design patterns
 // -------------------------------------
 
 @import "objects.pack";
@@ -94,15 +92,15 @@
 @import "objects.layout";
 
 // -------------------------------------
-//   7. Components - UI Styles
+//   6. Components - UI Styles
 // -------------------------------------
 
 // -------------------------------------
-//   8. Themes
+//   7. Themes
 // -------------------------------------
 
 // -------------------------------------
-//   9. Trumps
+//   8. Trumps
 // -------------------------------------
 
 @import "trumps.visibility";

@@ -1,20 +1,13 @@
-  </div> <!-- /.row -->
-
 </main>
 
-<footer class="c-site-footer" role="contentinfo">
-
-  <div class="row">
-
-    <div class="column small-12">
-
+<footer role="contentinfo">
+<div class="row">
+  <div class="column">
     <p>
-      &copy; 2015
+      &copy; 2016
     </p>
-
-    </div>
-
   </div>
+</div>
 
 </footer>
 
