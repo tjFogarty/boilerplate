@@ -8,16 +8,21 @@ import {Greetings} from './modules/greetings';
 
 // Grab what you need from Foundation
 // Note: If you get errors in the console, check them out and see if there are dependencies - e.g. foundation.core requires foundation.util.mediaQuery
-require('../../node_modules/foundation-sites/js/foundation.core');
-require('../../node_modules/foundation-sites/js/foundation.tabs');
-require('../../node_modules/foundation-sites/js/foundation.util.mediaQuery');
-require('../../node_modules/foundation-sites/js/foundation.util.keyboard');
+// require('../../node_modules/foundation-sites/js/foundation.core');
+// require('../../node_modules/foundation-sites/js/foundation.tabs');
+// require('../../node_modules/foundation-sites/js/foundation.util.mediaQuery');
+// require('../../node_modules/foundation-sites/js/foundation.util.keyboard');
+
+// Or just grab everything
+require('foundation-sites');
 
 // Ready to go!
 // This is a self-invoking anonymous function
 // Helps stop spilling out into global namespace
+// Alias $ to jQuery
 (function($) {
   // When the DOM is ready, we can start up any plugins or custom scripts
+  // Pretty much everything you code goes in here
   $(document).ready(function () {
     Greetings.to('developer');
     $(document).foundation();

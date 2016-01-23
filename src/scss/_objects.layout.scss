@@ -4,10 +4,4 @@
 //
 // *************************************
 
-.o-layout {
-  @include grid-row();
-}
-
-.o-layout__item {
-  @include grid-column();
-}
+@include foundation-flex-grid;

@@ -10,10 +10,6 @@
  */
 
 html {
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  font-family: $base-font-family;
-  color: $base-text-colour;
   overflow-y: scroll; //  Force scrollbars to always be visible to prevent awkward ‘jumps’ when navigating between pages that do/do not have enough content to produce scrollbars naturally.
   min-height: 100%; // Ensure the page always fills at least the entire height of the viewport
   text-size-adjust: 100%; // Prevent certain mobile browsers from automatically zooming fonts.
@@ -22,11 +18,11 @@ html {
 }
 
 ::selection {
-  background: $primary-colour;
+  background: #333;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: $primary-colour;
+  background: #333;
   color: #fff;
 }

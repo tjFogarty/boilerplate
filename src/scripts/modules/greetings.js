@@ -1,5 +1,5 @@
 export let Greetings = {
   to(subject = 'toilet') {
-    console.log(`Greetings, ${subject}!`);
-  } 
+    console.log(`Greetings, ${subject}!!!`);
+  }
 };

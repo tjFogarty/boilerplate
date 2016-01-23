@@ -12,30 +12,32 @@
 //   2. Tools
 //      -> Mixins and functions, no styles yet
 //
-//   3. Required Vendor files
-//      -> We're breaking the rules here a bit
-//         but this is a necessary evil.
-//         Some of our styles might require external libraries.
-//
-//   4. Generic - nothing too specific
+//   3. Generic - nothing too specific
 //      -> Base level resets, box sizing
 //
-//   5. Elements
+//   4. Elements
 //      -> Target individual elements, no classes just type selectors
 //
-//   6. Objects
+//   5. Objects
 //      -> Design patterns, not style-specific
 //         Examples would be grids, or layout patterns
 //
-//   7. Components
+//   6. Components
 //      -> Ok, you can start styling the UI now
 //
-//   8. Themes
+//   7. Themes
 //      -> Completely optional - theme your components
 //
-//   9. Trumps/Utilities
+//   8. Trumps/Utilities
 //      -> Overrides and helpers
 //         e.g. text-aligns, widths, floats, display...
+//
+//   9. Vendor
+//     -> Third-party libraries
+//
+//  10. Shame
+//    -> Quick fixes/hacks. Keep them all in once place
+//       so you can keep track, and come back to them later
 //
 // *************************************
 
@@ -46,7 +48,7 @@
 
 @import "settings.defaults";
 @import "settings.colours";
-@import "settings.headings";
+// ----- Check out this file to set some base rules ----- //
 @import "settings.foundation";
 
 // -------------------------------------
@@ -56,19 +58,18 @@
 @import "tools.clearfix";
 @import "tools.functions";
 @import "tools.mixins";
+// Though this is a vendor dependency, we need this loaded first in order to use it
+@import "../../node_modules/foundation-sites/scss/foundation";
 
 // -------------------------------------
 //   3. Vendor
 // -------------------------------------
 
-@import "../../node_modules/foundation-sites/scss/foundation";
-@import "../../node_modules/foundation-sites/scss/components/tabs";
 
 // -------------------------------------
 //   4. Generic
 // -------------------------------------
 
-@import "generic.normalize";
 @import "generic.box-sizing";
 @import "generic.reset";
 
@@ -77,8 +78,8 @@
 // -------------------------------------
 
 @import "elements.page";
-@import "elements.headings";
 @import "elements.paragraphs";
+@import "elements.images";
 @import "elements.links";
 @import "elements.forms";
 @import "elements.inputs";
@@ -89,14 +90,12 @@
 
 @import "objects.pack";
 @import "objects.list-bare";
-@import "objects.flex";
+@import "objects.list-inline";
 @import "objects.layout";
 
 // -------------------------------------
 //   7. Components - UI Styles
 // -------------------------------------
-
-@import "components.tabs";
 
 // -------------------------------------
 //   8. Themes
@@ -106,7 +105,15 @@
 //   9. Trumps
 // -------------------------------------
 
-@import "trumps.headings";
-@import "trumps.responsive-widths";
 @import "trumps.visibility";
 @import "trumps.print";
+
+// -------------------------------------
+//   9. Vendor
+// -------------------------------------
+
+// -------------------------------------
+//  10.  SHAAAAMMMEEE
+// ------------------------------------
+
+@import "shame";
