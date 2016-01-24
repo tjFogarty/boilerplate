@@ -9,6 +9,7 @@
     "browser-sync": "^2.11.1",
     "eslint": "^1.10.3",
     "node-notifier": "^4.4.0",
+    "nodemon": "^1.8.1",
     "watchify": "^3.7.0"
   },
   "scripts": {
