@@ -9,6 +9,7 @@
     "browser-sync": "^2.11.1",
     "browserify": "^13.0.0",
     "eslint": "^1.10.3",
+    "eslint-plugin-babel": "^3.0.0",
     "node-notifier": "^4.4.0",
     "node-sass": "^3.4.2",
     "nodemon": "^1.8.1",
