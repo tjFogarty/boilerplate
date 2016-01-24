@@ -7,8 +7,10 @@
     "babel-preset-es2015": "^6.3.13",
     "babelify": "^7.2.0",
     "browser-sync": "^2.11.1",
+    "browserify": "^13.0.0",
     "eslint": "^1.10.3",
     "node-notifier": "^4.4.0",
+    "node-sass": "^3.4.2",
     "nodemon": "^1.8.1",
     "watchify": "^3.7.0"
   },
