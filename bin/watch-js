@@ -1,0 +1,1 @@
+node_modules/.bin/watchify src/scripts/main.js -o assets/scripts/main.bundle.js -t [ babelify --presets [ es2015 ] ] -dv

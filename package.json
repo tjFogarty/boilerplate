@@ -2,7 +2,7 @@
   "name": "boilerplate",
   "version": "2.0.0",
   "description": "Boilerplate for web projects",
-  "author": "Emagine Media",
+  "author": "Emagine",
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
     "babelify": "^7.2.0",
@@ -13,16 +13,16 @@
   },
   "scripts": {
     "lint": "node_modules/.bin/eslint src/scripts/**/*.js",
-    "build": "npm run compile",
-    "compile": "npm run compile:js | npm run compile:scss",
-    "compile:js": "node_modules/.bin/browserify src/scripts/main.js -o assets/scripts/main.bundle.js -t [ babelify --presets [ es2015 ] ]",
-    "compile:scss": "node_modules/.bin/node-sass src/scss/main.scss assets/css/main.css & npm run notify:scss",
-    "watch:scss": "echo 'Watching files...' && node_modules/.bin/nodemon -e scss -x \"npm run compile:scss\"",
-    "watch:js": "node_modules/.bin/watchify src/scripts/main.js -o assets/scripts/main.bundle.js -t [ babelify --presets [ es2015 ] ] -dv",
-    "reload": "node_modules/.bin/browser-sync reload --url http://localhost:8000 --files='assets/*'",
-    "watch": "npm run watch:scss & npm run watch:js & npm run reload",
-    "notify:js": "node_modules/.bin/notify -t 'JavaScript' -m 'JS Compiled'",
-    "notify:scss": "node_modules/.bin/notify -t 'Sass' -m 'Sass Compiled'"
+    "build": "bin/build",
+    "compile:js": "bin/compile-js",
+    "compile:scss": "bin/compile-scss",
+    "watch:scss": "bin/watch-scss",
+    "watch:js": "bin/watch-js",
+    "reload": "bin/reload",
+    "watch": "bin/watch",
+    "notify:js": "bin/notify-js",
+    "notify:css": "bin/notify-css",
+    "sync": "bin/sync"
   },
   "dependencies": {
     "foundation-sites": "^6.1.1"
