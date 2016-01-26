@@ -1,11 +1,9 @@
 # Boilerplate
 
 ## TL;DR
-`npm install && gulp install` then run `gulp` to run the default task which will compile assets. `gulp watch` will run browsersync and watch assets for changes.
+`npm install` then run `npm run watch` to run the default task which will launch browsersync and watch assets for changes.
 
-You can fire this into a static or CMS based project. Configuration changes are made in `config.js` which have already been given some default values. First thing to change would be the local_url.
-
-Gulp tasks are broken into files located in the tasks folder.
+Build scripts are location in the `bin` folder, so you can change the `sync` task to include your own development url.
 
 This makes heavy use of awesome things done by other people:
 
@@ -16,19 +14,20 @@ This makes heavy use of awesome things done by other people:
 
 ## Files
 
-* `.bowerrc` - Sets the location of your Bower dependencies
 * `.editorconfig` - Most editors pick this up, and it lets you specify a consistent coding styles
-* `.jshintrc` - Rules for JSHint
-* `config.js` - Configuration for Gulp tasks
+* `.eslintrc` - Rules for ESLint
 
 ## Folders
 
-* `assets/css` - Compiled CSS, and IE Stylesheet
-* `assets/fonts` - Can be icon fonts
+### Public
+* `assets/css` - Compiled CSS
 * `assets/images`
-* `assets/lib` - Default Bower components location
-* `assets/scripts` - JavaScript, see `main.js` for recommended structuring of files
-* `assets/scss` - Sass, see `main.scss` for recommended structuring of files
+* `assets/lib` - Typically vendor files that aren't part of the asset pipeline
+* `assets/scripts` - compiled JavaScript
+
+### Source
+* `src/scripts/` - JavaScript files/modules
+* `src/scss/` - Sass files, see the `main.scss` file for structure information
 
 ## Extra Material
 
