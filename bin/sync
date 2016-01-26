@@ -1,1 +1,1 @@
-node_modules/.bin/browser-sync start --proxy=boilerplate.dev --xip --files 'assets/css/*.css, assets/scripts/*.js'
+node_modules/.bin/browser-sync start --proxy=boilerplate.dev --xip --files 'assets/css/*.css, assets/scripts/*.js, *.php, *.html, *.twig'

@@ -750,6 +750,9 @@ html {
   background: #333;
   color: #fff; }
 
+p {
+  margin-bottom: 15px; }
+
 img {
   display: inline-block;
   vertical-align: middle;

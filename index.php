@@ -2,39 +2,54 @@
 
 
   <div class="row">
-    <div class="column small-12">
+    <div class="column small-12 medium-6 medium-offset-3">
 
       <article>
 
         <header>
-          <h2>Elements</h2>
+          <h2>Instructions</h2>
         </header>
 
         <section>
-          <div>
+          <h3>Installation</h3>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Once you've cloned the repo, run <code>npm install</code> and all dependencies will be installed.
           </p>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Have a look at the <code>package.json</code> file and you will see the list of tasks that are available.
           </p>
 
-          <h3>Headings</h3>
+          <p>
+            Running <code>npm run watch</code> will run the <code>watch:js</code>, <code>watch:js</code>, and <code>sync</code>.
+          </p>
 
-          <h1>Heading 1</h1>
+          <p>
+            You can change the sync settings by editing the file in <code>bin/watch</code>.
+          </p>
+        </section>
 
-          <h2>Heading 2</h2>
+        <section>
+          <h3>Adding dependencies</h3>
 
-          <h3>Heading 3</h3>
+          <p>
+            If you wish to persist a dependency to the project, you can use either of the following:
+          </p>
 
-          <h4>Heading 4</h4>
+          <ul>
+            <li>
+              <code>npm install jquery --save</code>
+            </li>
 
-          <h5>Heading 5</h5>
+            <li>
+              <code>npm install node-sass --save-dev</code>
+            </li>
+          </ul>
 
-          <h6>Heading 6</h6>
-
+          <p>
+            <code>--save-dev</code> should be reserved for development dependencies, e.g. build tools like Sass or Browserify.
+          </p>
         </section>
 
       </article>
