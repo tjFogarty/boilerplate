@@ -1,1 +1,1 @@
-node_modules/.bin/browserify src/scripts/main.js -o assets/scripts/main.bundle.js -t [ babelify --presets [ es2015 ] ]
+node_modules/.bin/browserify src/scripts/main.js -o assets/scripts/main.bundle.js
