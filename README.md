@@ -5,6 +5,8 @@
 
 Build scripts are location in the `bin` folder, so you can change the `sync` task to include your own development url.
 
+Modify `webpack.config.js` to your liking. Default setup uses Babel, but you can add other presets (e.g. React) or extra loaders (e.g. Vue loader).
+
 This makes heavy use of awesome things done by other people:
 
 * [Normalize.css](http://necolas.github.io/normalize.css/)

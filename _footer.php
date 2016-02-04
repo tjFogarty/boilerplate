@@ -11,7 +11,8 @@
 
 </footer>
 
-<script src="/assets/scripts/main.bundle.js"></script>
+<script src="/assets/scripts/vendor.js"></script>
+<script src="/assets/scripts/bundle.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

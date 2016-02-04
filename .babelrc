@@ -1,4 +1,0 @@
-{
-  "plugins": ["transform-runtime", "transform-es2015-arrow-functions"],
-  "presets": ["stage-0"]
-}

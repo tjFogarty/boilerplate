@@ -1,1 +1,1 @@
-node_modules/.bin/watchify src/scripts/main.js -o assets/scripts/main.bundle.js -dv
+node_modules/.bin/webpack --watch
