@@ -15,7 +15,7 @@ module.exports = {
 
     vendor: [
       '!!script!jquery/dist/jquery.min.js',
-      '!!script!foundation-sites/dist/foundation.min.js'
+      // '!!script!foundation-sites/dist/foundation.min.js'
     ]
   },
 

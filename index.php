@@ -3,7 +3,7 @@
 
   <div class="row">
     <div class="column small-12 medium-6 medium-offset-3">
-      <article>
+      <article data-equalizer>
         <header>
           <h2>Instructions</h2>
         </header>
