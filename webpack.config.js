@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var WebpackNotifierPlugin = require('webpack-notifier');
 
 const path = require('path');
 
@@ -28,7 +29,8 @@ module.exports = {
     new webpack.ProvidePlugin({
       '$': 'jquery', 
       jQuery: 'jquery'
-    })
+    }),
+    new WebpackNotifierPlugin()
   ],
 
   externals: {
