@@ -30,7 +30,7 @@ module.exports = {
       '$': 'jquery', 
       jQuery: 'jquery'
     }),
-    new WebpackNotifierPlugin()
+    new WebpackNotifierPlugin({ alwaysNotify: true })
   ],
 
   externals: {
