@@ -7,7 +7,6 @@
     "defaultParams": true,                     // enable default function parameters
     "forOf": true,                             // enable for-of loops
     "generators": true,                        // enable generators
-    "modules": true,
     "objectLiteralComputedProperties": true,   // enable computed object literal property names
     "objectLiteralDuplicateProperties": false,  // enable duplicate object literal properties in strict mode
     "objectLiteralShorthandMethods": true,     // enable object literal shorthand methods
@@ -19,6 +18,14 @@
     "unicodeCodePointEscapes": false,           // enable code point escapes
     "jsx": false                                // enable JSX
   },
+
+  "parserOptions": {
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
+
+  "parser": "babel-eslint",
 
   "env": {
     "browser": true,     // browser global variables.

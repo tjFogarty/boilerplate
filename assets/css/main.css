@@ -1569,3 +1569,6 @@ img {
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: ""; } }
+
+body {
+  background: red; }

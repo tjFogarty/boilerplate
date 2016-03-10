@@ -5,6 +5,7 @@
   "author": "Emagine",
   "devDependencies": {
     "babel-core": "^6.4.5",
+    "babel-eslint": "^5.0.0",
     "babel-loader": "^6.2.2",
     "babel-plugin-transform-es2015-arrow-functions": "^6.4.0",
     "babel-plugin-transform-runtime": "^6.4.3",
