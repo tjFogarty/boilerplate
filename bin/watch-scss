@@ -1,1 +1,1 @@
-node_modules/.bin/node-sass -w -r --include-path scss src/scss/main.scss assets/css/main.css
+node_modules/.bin/chokidar 'src/scss/**/*.scss' -c 'npm run compile:scss'
