@@ -1,11 +1,7 @@
 # Boilerplate
 
 ## TL;DR
-`npm install` then run `npm run watch` to run the default task which will launch browsersync and watch assets for changes.
-
-Build scripts are location in the `bin` folder, so you can change the `sync` task to include your own development url.
-
-Modify `webpack.config.js` to your liking. Default setup uses Babel, but you can add other presets (e.g. React) or extra loaders (e.g. Vue loader).
+`npm install` then run `gulp watch` to run the default task which will launch browsersync and watch assets for changes.
 
 This makes heavy use of awesome things done by other people:
 
