@@ -1,0 +1,16 @@
+// *************************************
+//
+//  BEM settings
+//  @see https://github.com/jsng/bem-sass
+//
+// *************************************
+
+@include configure-bem-sass((
+  element-sep: "__",
+  modifier-sep: "--",
+  block-levels: (
+    object:    "o-",
+    component: "c-",
+    utility: "u-"
+  )
+));

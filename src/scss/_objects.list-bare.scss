@@ -4,8 +4,7 @@
 //
 // *************************************
 
-.o-list-bare,
-%o-list-bare {
+@include block(list-bare, "object") {
   padding: 0;
   margin: 0;
   list-style: none;

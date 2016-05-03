@@ -1,5 +1,10 @@
 var gulp = require('gulp'),
+    fs = require('fs'),
     sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    postcss = require('gulp-postcss'),
+    cssreporter = require('postcss-reporter'),
+    immutableCSS = require('immutable-css'),
     gutil = require('gulp-util'),
     browserSync = require('browser-sync').create(),
     browserify = require('browserify'),
@@ -14,6 +19,16 @@ gulp.task('browser-sync', function() {
     xip: true,
     online: true
   });
+});
+
+gulp.task('check-css', function() {
+  return gulp.src('./assets/css/main.css')
+    .pipe(postcss([
+      immutableCSS({
+        strick: true,
+        immutablePrefixes: [/\.u\-/, /\.c\-/, /\.o\-/]
+      })
+    ]));
 });
 
 gulp.task('watch', ['styles:watch', 'scripts:watch', 'browser-sync'], function() {

@@ -9,40 +9,27 @@
  * 1. Fill all available space.
  * 2. Cause children to be automatically equally sized.
  */
-.o-pack,
-%o-pack {
-    width: 100%; /* [1] */
-    display: table;
-    table-layout: fixed; /* [2] */
-}
 
-    /**
-     * Cause children to adopt table-like structure.
-     */
-    .o-pack__item,
-    %o-pack__item {
-        display: table-cell;
+@include block(pack, "object") {
+  width: 100%; /* [1] */
+  display: table;
+  table-layout: fixed; /* [2] */
 
+  @include def-shared-rules('items') {
+    display: table-cell;
+  }
 
-      /**
-       * All items are aligned to the middles of each other.
-       */
+  @include element(item) {
+    @include shared-rules('items');
 
-      .o-pack--middle > &,
-      %o-pack--middle > & {
-          vertical-align: middle;
-      }
-
-
-
-      /**
-       * All items are aligned to the bottoms of each other.
-       */
-
-      .o-pack--bottom > &,
-      %o-pack--bottom > & {
-          vertical-align: bottom;
-      }
-
-
+    @include modifier(middle) {
+      @include shared-rules('items');
+      vertical-align: middle;
     }
+
+    @include modifier(bottom) {
+      @include shared-rules('items');
+      vertical-align: bottom;
+    }
+  }
+}
