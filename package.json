@@ -23,7 +23,8 @@
     "lodash.assign": "^4.0.8",
     "require-dir": "^0.3.0",
     "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.7.0"
+    "watchify": "^3.7.0",
+    "browserify-shim": "^3.8.12"
   },
   "dependencies": {
     "foundation-sites": "^6.2.1",
