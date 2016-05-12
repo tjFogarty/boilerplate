@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "foundation-sites": "^6.2.1",
-    "jquery": "^2.2.3",
+    "jquery": "^2.2.3"
   },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.js",
