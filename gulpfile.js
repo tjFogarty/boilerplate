@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     postcss = require('gulp-postcss'),
+    cssstats = require('gulp-cssstats'),
     cssreporter = require('postcss-reporter'),
     immutableCSS = require('immutable-css'),
     gutil = require('gulp-util'),
@@ -11,14 +12,32 @@ var gulp = require('gulp'),
     babelify = require('babelify'),
     watchify = require('watchify'),
     source = require('vinyl-source-stream'),
-    notify = require('gulp-notify');
+    notify = require('gulp-notify'),
+    imagemin = require('gulp-imagemin');
 
+// Change the proxy property to suit your domain
 gulp.task('browser-sync', function() {
   browserSync.init({
     proxy: 'boilerplate.dev',
     xip: true,
     online: true
   });
+});
+
+// Generate CSS stats
+gulp.task('cssstats', function() {
+  gulp.src('assets/css/main.css')
+    .pipe(cssstats())
+    .pipe(gulp.dest('./'));
+});
+
+gulp.task('images', function() {
+  return gulp.src('src/images/*')
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}]
+    }))
+    .pipe(gulp.dest('assets/images'));
 });
 
 gulp.task('check-css', function() {
@@ -125,5 +144,5 @@ gulp.task('styles', function() {
  * @param  {function} callback
  */
 gulp.task('styles:watch', function() {
-  gulp.watch('./src/scss/**/*.scss', ['styles']);
+  gulp.watch('src/scss/**/*.scss', ['styles']);
 });
