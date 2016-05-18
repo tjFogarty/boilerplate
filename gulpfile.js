@@ -1,11 +1,6 @@
 var gulp = require('gulp'),
-    fs = require('fs'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    postcss = require('gulp-postcss'),
-    cssstats = require('gulp-cssstats'),
-    cssreporter = require('postcss-reporter'),
-    immutableCSS = require('immutable-css'),
     gutil = require('gulp-util'),
     browserSync = require('browser-sync').create(),
     browserify = require('browserify'),
@@ -13,6 +8,7 @@ var gulp = require('gulp'),
     watchify = require('watchify'),
     source = require('vinyl-source-stream'),
     notify = require('gulp-notify'),
+    wiredep = require('wiredep'),
     imagemin = require('gulp-imagemin');
 
 // Change the proxy property to suit your domain
@@ -24,11 +20,14 @@ gulp.task('browser-sync', function() {
   });
 });
 
-// Generate CSS stats
-gulp.task('cssstats', function() {
-  gulp.src('assets/css/main.css')
-    .pipe(cssstats())
+gulp.task('wiredep', function() {
+  gulp.src('./_footer.php')
+    .pipe(wiredep.stream())
     .pipe(gulp.dest('./'));
+});
+
+gulp.task('wiredep:watch', function() {
+  gulp.watch('bower.json', ['wiredep']);
 });
 
 gulp.task('images', function() {
@@ -40,17 +39,7 @@ gulp.task('images', function() {
     .pipe(gulp.dest('assets/images'));
 });
 
-gulp.task('check-css', function() {
-  return gulp.src('./assets/css/main.css')
-    .pipe(postcss([
-      immutableCSS({
-        strick: true,
-        immutablePrefixes: [/\.u\-/, /\.c\-/, /\.o\-/]
-      })
-    ]));
-});
-
-gulp.task('watch', ['styles:watch', 'scripts:watch', 'browser-sync'], function() {
+gulp.task('watch', ['styles:watch', 'scripts:watch', 'browser-sync', 'wiredep:watch'], function() {
       gulp.watch('**/*.php').on('change', browserSync.reload);
       gulp.watch('./assets/scripts/**/*.js').on('change', browserSync.reload);
 });

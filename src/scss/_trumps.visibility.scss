@@ -4,7 +4,7 @@
 //
 // *************************************
 
-@include block(show-for-sr, 'utility') {
+.u-show-for-sr {
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
@@ -17,15 +17,51 @@
  */
 @each $bpname, $bp in $breakpoints {
   @include breakpoint($bpname) {
-    .u-hidden\@#{$bpname} {
+    .u-hidden\@#{$bpname}-up {
       display: none;
     }
 
-    .u-visible\@#{$bpname} {
+    .u-visible\@#{$bpname}-up {
       display: block;
     }
 
-    .u-show-for-sr\@#{$bpname} {
+    .u-show-for-sr\@#{$bpname}-up {
+      clip: rect(1px, 1px, 1px, 1px);
+      height: 1px;
+      overflow: hidden;
+      position: absolute !important;
+      width: 1px;
+    }
+  }
+
+  @include breakpoint($bpname only) {
+    .u-hidden\@#{$bpname}-only {
+      display: none;
+    }
+
+    .u-visible\@#{$bpname}-only {
+      display: block;
+    }
+
+    .u-show-for-sr\@#{$bpname}-only {
+      clip: rect(1px, 1px, 1px, 1px);
+      height: 1px;
+      overflow: hidden;
+      position: absolute !important;
+      width: 1px;
+    }
+  }
+
+  @include breakpoint($bpname down) {
+    .u-hidden\@#{$bpname}-down {
+      display: none;
+    }
+
+    .u-visible\@#{$bpname}-down {
+      display: block;
+    }
+
+    .u-show-for-sr\@#{$bpname}-down {
       clip: rect(1px, 1px, 1px, 1px);
       height: 1px;
       overflow: hidden;

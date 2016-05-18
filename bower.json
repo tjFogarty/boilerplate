@@ -1,0 +1,21 @@
+{
+  "name": "boilerplate",
+  "description": "Boilerplate for web projects",
+  "authors": [
+    "Emagine Media"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "foundation-sites": "^6.2.1"
+  }
+}

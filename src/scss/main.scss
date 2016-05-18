@@ -59,10 +59,7 @@
 @import "tools.functions";
 @import "tools.mixins";
 // Though this is a vendor dependency, we need this loaded first in order to use it
-@import "../../node_modules/bem-sass/dist/bem-sass";
-@import "settings.bem";
-
-@import "../../node_modules/foundation-sites/scss/foundation";
+@import "../../assets/lib/foundation-sites/scss/foundation";
 @import "foundation.imports";
 
 // -------------------------------------

@@ -1,5 +1,6 @@
-import $ from 'jquery';
-import 'foundation-sites';
+/**
+ * Main.js
+ */
 
 $(document).ready(function() {
   $(document).foundation();

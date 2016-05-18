@@ -11,6 +11,12 @@
 
 </footer>
 
+<!-- bower:js -->
+<script src="assets/lib/jquery/dist/jquery.js"></script>
+<script src="assets/lib/what-input/what-input.js"></script>
+<script src="assets/lib/foundation-sites/dist/foundation.js"></script>
+<!-- endbower -->
+
 <script src="/assets/scripts/main.bundle.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

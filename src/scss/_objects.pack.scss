@@ -10,26 +10,22 @@
  * 2. Cause children to be automatically equally sized.
  */
 
-@include block(pack, "object") {
+.o-pack {
   width: 100%; /* [1] */
   display: table;
   table-layout: fixed; /* [2] */
+}
 
-  @include def-shared-rules('items') {
-    display: table-cell;
-  }
+.o-pack__item {
+  display: table-cell;
+}
 
-  @include element(item) {
-    @include shared-rules('items');
+.o-pack__item--middle {
+  display: table-cell;
+  vertical-align: middle;
+}
 
-    @include modifier(middle) {
-      @include shared-rules('items');
-      vertical-align: middle;
-    }
-
-    @include modifier(bottom) {
-      @include shared-rules('items');
-      vertical-align: bottom;
-    }
-  }
+.o-pack__item--bottom {
+  display: table-cell;
+  vertical-align: bottom;
 }
