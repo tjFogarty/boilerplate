@@ -12,7 +12,7 @@
           <h3>Installation</h3>
 
           <p>
-            Once you've cloned the repo, run <code>npm install</code> and all dependencies will be installed.
+            Once you've cloned the repo, run <code>npm run setup</code> and all dependencies will be installed.
           </p>
 
           <p>

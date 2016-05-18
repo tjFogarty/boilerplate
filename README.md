@@ -1,7 +1,7 @@
 # Boilerplate
 
 ## TL;DR
-`npm install` then run `gulp watch` to run the default task which will launch browsersync and watch assets for changes.
+`npm run setup` then run `gulp watch` to run the default task which will launch browsersync and watch assets for changes.
 
 This makes heavy use of awesome things done by other people:
 
