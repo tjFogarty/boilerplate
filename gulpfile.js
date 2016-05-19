@@ -79,7 +79,7 @@ function buildScript(file, watch) {
     return stream
       .on('error', handleErrors)
       .pipe(source(fileName + '.bundle.js'))
-      .pipe(notify('JS Compiled!'))
+      .pipe(notify({title: 'JS Compiled!', message: 'Yurt', icon: './src/icon.png'}))
       .pipe(gulp.dest('./assets/scripts/'));
   }
 
@@ -122,7 +122,7 @@ gulp.task('styles', function() {
     .pipe(autoprefixer({
         browsers: ['last 2 versions']
     }))
-    .pipe(notify('Sass Compiled!'))
+    .pipe(notify({title: 'Styles Compiled!', message: 'Good hustle', icon: './src/icon.png'}))
     .pipe(gulp.dest('./assets/css/'))
     .pipe(browserSync.stream());
 });
