@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream'),
     notify = require('gulp-notify'),
     wiredep = require('wiredep'),
+    ngrok = require('ngrok'),
     imagemin = require('gulp-imagemin');
 
 // Change the proxy property to suit your domain
@@ -17,6 +18,12 @@ gulp.task('browser-sync', function() {
     proxy: 'boilerplate.dev',
     xip: true,
     online: true
+  }, function(err, bs) {
+    if (!err) {
+      ngrok.connect(bs.options.get('port'), function(err, url) {
+        console.log('Share URL: ' + url);
+      });
+    }
   });
 });
 
