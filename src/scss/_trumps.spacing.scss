@@ -1,0 +1,91 @@
+// *************************************
+//
+//  Spacing
+//
+// *************************************
+
+$spacing-values: (
+  0,
+  10,
+  20,
+  30,
+  40,
+  50,
+  60,
+  70,
+  80
+);
+
+@each $value in $spacing-values {
+  @each $bpname, $bp in $breakpoints {
+    @include breakpoint($bpname) {
+      .u-mt-#{$value}\@#{$bpname}-up {
+        margin-top: $value * 1px !important;
+      }
+
+      .u-mr-#{$value}\@#{$bpname}-up {
+        margin-right: $value * 1px !important;
+      }
+
+      .u-mb-#{$value}\@#{$bpname}-up {
+        margin-bottom: $value * 1px !important;
+      }
+
+      .u-ml-#{$value}\@#{$bpname}-up {
+        margin-left: $value * 1px !important;
+      }
+
+      .u-pt-#{$value}\@#{$bpname}-up {
+        padding-top: $value * 1px !important;
+      }
+
+      .u-pr-#{$value}\@#{$bpname}-up {
+        padding-right: $value * 1px !important;
+      }
+
+      .u-pb-#{$value}\@#{$bpname}-up {
+        padding-bottom: $value * 1px !important;
+      }
+
+      .u-pl-#{$value}\@#{$bpname}-up {
+        padding-left: $value * 1px !important;
+      }
+    }
+  }
+
+  @each $bpname, $bp in $breakpoints {
+    @include breakpoint($bpname only) {
+      .u-mt-#{$value}\@#{$bpname}-only {
+        margin-top: $value * 1px !important;
+      }
+
+      .u-mr-#{$value}\@#{$bpname}-only {
+        margin-right: $value * 1px !important;
+      }
+
+      .u-mb-#{$value}\@#{$bpname}-only {
+        margin-bottom: $value * 1px !important;
+      }
+
+      .u-ml-#{$value}\@#{$bpname}-only {
+        margin-left: $value * 1px !important;
+      }
+
+      .u-pt-#{$value}\@#{$bpname}-down {
+        padding-top: $value * 1px !important;
+      }
+
+      .u-pr-#{$value}\@#{$bpname}-down {
+        padding-right: $value * 1px !important;
+      }
+
+      .u-pb-#{$value}\@#{$bpname}-down {
+        padding-bottom: $value * 1px !important;
+      }
+
+      .u-pl-#{$value}\@#{$bpname}-down {
+        padding-left: $value * 1px !important;
+      }
+    }
+  }
+}

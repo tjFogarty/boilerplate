@@ -4,69 +4,30 @@
 //
 // *************************************
 
-.u-show-for-sr {
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute !important;
-  width: 1px;
-}
+$bp-values: (
+  '': '-up',
+  'only': '-only',
+  'down': '-down'
+);
 
-/**
- * Generates responsive hidden, visible and screen reader classes
- */
 @each $bpname, $bp in $breakpoints {
-  @include breakpoint($bpname) {
-    .u-hidden\@#{$bpname}-up {
-      display: none;
-    }
+  @each $val, $class in $bp-values {
+    @include breakpoint($bpname $val) {
+      .u-hidden\@#{$bpname}#{$class} {
+        display: none !important;
+      }
 
-    .u-visible\@#{$bpname}-up {
-      display: block;
-    }
+      .u-visible\@#{$bpname}#{$class} {
+        display: block !important;
+      }
 
-    .u-show-for-sr\@#{$bpname}-up {
-      clip: rect(1px, 1px, 1px, 1px);
-      height: 1px;
-      overflow: hidden;
-      position: absolute !important;
-      width: 1px;
-    }
-  }
-
-  @include breakpoint($bpname only) {
-    .u-hidden\@#{$bpname}-only {
-      display: none;
-    }
-
-    .u-visible\@#{$bpname}-only {
-      display: block;
-    }
-
-    .u-show-for-sr\@#{$bpname}-only {
-      clip: rect(1px, 1px, 1px, 1px);
-      height: 1px;
-      overflow: hidden;
-      position: absolute !important;
-      width: 1px;
-    }
-  }
-
-  @include breakpoint($bpname down) {
-    .u-hidden\@#{$bpname}-down {
-      display: none;
-    }
-
-    .u-visible\@#{$bpname}-down {
-      display: block;
-    }
-
-    .u-show-for-sr\@#{$bpname}-down {
-      clip: rect(1px, 1px, 1px, 1px);
-      height: 1px;
-      overflow: hidden;
-      position: absolute !important;
-      width: 1px;
+      .u-show-for-sr\@#{$bpname}#{$class} {
+        clip: rect(1px, 1px, 1px, 1px) !important;
+        height: 1px !important;
+        overflow: hidden !important;
+        position: absolute !important;
+        width: 1px !important;
+      }
     }
   }
 }
