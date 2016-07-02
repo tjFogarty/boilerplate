@@ -1,0 +1,23 @@
+// *************************************
+//
+//  Text Utilities
+//
+// *************************************
+
+@each $bpname in $breakpoint-classes {
+  @each $val, $class in $bp-values {
+    @include breakpoint($bpname $val) {
+      .u-tl\@#{$bpname}#{$class} {
+        text-align: left !important;
+      }
+
+      .u-tr\@#{$bpname}#{$class} {
+        text-align: right !important;
+      }
+
+      .u-tc\@#{$bpname}#{$class} {
+        text-align: center !important;
+      }
+    }
+  }
+}

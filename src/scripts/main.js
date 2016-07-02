@@ -1,7 +1,5 @@
-/**
- * Main.js
- */
+import Foundation from './modules/foundation';
 
 $(document).ready(function() {
-  $(document).foundation();
+  Foundation.init();
 });

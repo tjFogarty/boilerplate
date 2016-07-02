@@ -1,5 +1,31 @@
 root = true
 
 [*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.php]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
 indent_style = space
+indent_size = 4
+
+[**.js]
+indent_style = space
+indent_size = 2
+
+[**.scss]
+indent_style = tab
+indent_size = 2
+
+[**.css]
+indent_style = tab
+indent_size = 2
+
+[**.html]
+indent_style = tab
 indent_size = 2

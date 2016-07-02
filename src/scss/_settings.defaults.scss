@@ -3,3 +3,28 @@
 //  Default settings
 //
 // *************************************
+
+$bp-values: (
+  '': '-up',
+  'only': '-only',
+  'down': '-down'
+);
+
+$typi: (
+  null: 16px
+);
+
+$h1-map: (
+  null: (3.129em, 1.2),
+  large: (2.3353em, 1.3)
+);
+
+$h2-map: (
+  null: 2.3353em,
+  large: 1.769em
+);
+
+$h3-map: (
+  null: 1.769em,
+  large: 1.333em
+);

@@ -17,7 +17,7 @@ gulp.task('browser-sync', function() {
     proxy: 'boilerplate.dev',
     xip: true,
     online: true
-  }
+  });
 });
 
 gulp.task('wiredep', function() {

@@ -12,12 +12,6 @@ $flex-justify: (
   sa: space-around
 );
 
-$bp-values: (
-  '': '-up',
-  'only': '-only',
-  'down': '-down'
-);
-
 $flex-align: (
   fs: flex-start,
   fe: flex-end,
@@ -27,19 +21,19 @@ $flex-align: (
 );
 
 $flex-directions: (
-  row,
-  row-reverse,
-  column,
-  column-reverse
+  r: row,
+  rr: row-reverse,
+  c: column,
+  cr: column-reverse
 );
 
 $flex-wrap: (
-  nowrap,
-  wrap,
-  wrap-reverse
+  nw: nowrap,
+  w: wrap,
+  wr: wrap-reverse
 );
 
-@each $bpname, $bp in $breakpoints {
+@each $bpname in $breakpoint-classes {
   @each $val, $class in $bp-values {
     @include breakpoint($bpname $val) {
       .l-flex\@#{$bpname}#{$class} {

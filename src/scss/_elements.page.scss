@@ -10,6 +10,8 @@
  */
 
 html {
+  @include typi-base();
+	font-family: sans-serif;
   overflow-y: scroll; //  Force scrollbars to always be visible to prevent awkward ‘jumps’ when navigating between pages that do/do not have enough content to produce scrollbars naturally.
   min-height: 100%; // Ensure the page always fills at least the entire height of the viewport
   text-size-adjust: 100%; // Prevent certain mobile browsers from automatically zooming fonts.

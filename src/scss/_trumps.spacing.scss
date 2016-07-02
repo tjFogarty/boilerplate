@@ -17,8 +17,12 @@ $spacing-values: (
 );
 
 @each $value in $spacing-values {
-  @each $bpname, $bp in $breakpoints {
+  @each $bpname in $breakpoint-classes {
     @include breakpoint($bpname) {
+      .u-ma-#{$value}\@#{$bpname}-up {
+        margin: $value * 1px !important;
+      }
+
       .u-mt-#{$value}\@#{$bpname}-up {
         margin-top: $value * 1px !important;
       }
@@ -33,6 +37,10 @@ $spacing-values: (
 
       .u-ml-#{$value}\@#{$bpname}-up {
         margin-left: $value * 1px !important;
+      }
+
+      .u-pa-#{$value}\@#{$bpname}-up {
+        padding: $value * 1px !important;
       }
 
       .u-pt-#{$value}\@#{$bpname}-up {

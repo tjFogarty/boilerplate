@@ -61,6 +61,7 @@
 // Though this is a vendor dependency, we need this loaded first in order to use it
 @import "../../assets/lib/foundation-sites/scss/foundation";
 @import "foundation.imports";
+@import "../../assets/lib/typi/scss/typi";
 
 // -------------------------------------
 //   3. Generic
@@ -79,6 +80,7 @@
 @import "elements.links";
 @import "elements.forms";
 @import "elements.inputs";
+@import "elements.headings";
 
 // -------------------------------------
 //   5. Objects - Design patterns
@@ -104,6 +106,7 @@
 @import "trumps.visibility";
 @import "trumps.spacing";
 @import "trumps.print";
+@import "trumps.text";
 
 // -------------------------------------
 //   9. Vendor

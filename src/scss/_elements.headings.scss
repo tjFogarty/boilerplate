@@ -1,0 +1,23 @@
+// *************************************
+//
+//  Headings
+//
+// *************************************
+
+h1, h2, h3 {
+  margin: 0 0 0.5rem;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  @include typi($h1-map);
+}
+
+h2 {
+  @include typi($h2-map);
+}
+
+h3 {
+  @include typi($h3-map);
+}

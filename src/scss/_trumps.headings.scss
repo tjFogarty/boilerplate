@@ -4,32 +4,32 @@
 //
 // *************************************
 
-.u-alpha,
-%u-alpha {
+.u-h1,
+%u-h1 {
     @include heading($h1);
 }
 
-.u-beta,
-%u-beta {
+.u-h2,
+%u-h2 {
     @include heading($h2);
 }
 
-.u-gamma,
-%u-gamma {
+.u-h3,
+%u-h3 {
     @include heading($h3);
 }
 
-.u-delta,
-%u-delta {
+.u-h4,
+%u-h4 {
     @include heading($h4);
 }
 
-.u-epsilon,
-%u-epsilon {
+.u-h5,
+%u-h5 {
     @include heading($h5);
 }
 
-.u-zeta,
-%u-zeta {
+.u-h6,
+%u-h6 {
     @include heading($h6);
 }

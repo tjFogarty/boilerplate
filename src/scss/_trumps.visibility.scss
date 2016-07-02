@@ -4,13 +4,7 @@
 //
 // *************************************
 
-$bp-values: (
-  '': '-up',
-  'only': '-only',
-  'down': '-down'
-);
-
-@each $bpname, $bp in $breakpoints {
+@each $bpname in $breakpoint-classes {
   @each $val, $class in $bp-values {
     @include breakpoint($bpname $val) {
       .u-hidden\@#{$bpname}#{$class} {
