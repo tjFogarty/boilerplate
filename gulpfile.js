@@ -9,6 +9,10 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream'),
     notify = require('gulp-notify'),
     wiredep = require('wiredep'),
+    postcss = require('gulp-postcss'),
+    reporter = require('postcss-reporter'),
+    syntax_scss = require('postcss-scss'),
+    stylelint = require('stylelint'),
     imagemin = require('gulp-imagemin');
 
 // Change the proxy property to suit your domain
@@ -125,6 +129,19 @@ gulp.task('styles', function() {
     .pipe(notify({title: 'Styles Compiled!', message: 'Good hustle', icon: './src/icon.png'}))
     .pipe(gulp.dest('./assets/css/'))
     .pipe(browserSync.stream());
+});
+
+var processors = [
+  stylelint(),
+  reporter({
+    clearMessages: true,
+    throwError: true
+  })
+];
+
+gulp.task('lint-styles', function() {
+  return gulp.src('src/scss/**/*.scss')
+            .pipe(postcss(processors, {syntax: syntax_scss}));
 });
 
 /**

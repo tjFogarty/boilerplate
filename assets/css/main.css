@@ -798,7 +798,9 @@ img {
   max-width: 100%;
   height: auto; }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0 0 0.5rem;
   font-weight: inherit;
   line-height: 1.2; }
