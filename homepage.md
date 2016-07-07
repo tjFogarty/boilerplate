@@ -1,3 +1,3 @@
 # Welcome
 
-This is the styleguide for AIT.
+This is the styleguide homepage.
