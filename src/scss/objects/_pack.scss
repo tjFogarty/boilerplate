@@ -1,9 +1,13 @@
-// *************************************
+//  Pack
 //
-//  Packing items
-//  -> Taken from inuit.scss
+//  The pack object sizes the children to fill all available space
 //
-// *************************************
+// .o-pack__item--middle - aligns an item to the middle
+// .o-pack__item--bottom - aligns an item to the bottom
+//
+//  Markup: html/pack.hbs
+//
+//  Style guide: objects.pack
 
 /**
  * 1. Fill all available space.

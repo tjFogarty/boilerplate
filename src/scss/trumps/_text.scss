@@ -1,0 +1,29 @@
+//  Text Utilities
+//
+//  Helper classes for modifying text styles
+//
+// .u-tl@small-up - Text aligns left
+// .u-tr@small-up - Text aligns right
+// .u-tc@small-up - Text aligns center
+//
+//  Markup: <p class="{{modifier_class}}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere aperiam, velit ullam minima asperiores doloribus ratione voluptatum voluptatem unde sed aliquam eveniet odit incidunt sapiente, ad distinctio aut, omnis maiores.</p>
+//
+//  Style guide: utilities.text
+
+@each $bpname in $breakpoint-classes {
+  @each $val, $class in $bp-values {
+    @include breakpoint($bpname $val) {
+      .u-tl\@#{$bpname}#{$class} {
+        text-align: left !important;
+      }
+
+      .u-tr\@#{$bpname}#{$class} {
+        text-align: right !important;
+      }
+
+      .u-tc\@#{$bpname}#{$class} {
+        text-align: center !important;
+      }
+    }
+  }
+}

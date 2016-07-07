@@ -1,0 +1,17 @@
+//  Inline List
+//
+//  Render a list inline
+//
+//  Markup: html/list-inline.html
+//
+//  Style guide: objects.list-inline
+
+.o-list-inline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    display: inline-block;
+  }
+}

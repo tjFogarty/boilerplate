@@ -1,0 +1,13 @@
+//  Bare List
+//
+//  A list stripped of margin, padding, and list styles
+//
+//  Markup: html/list-bare.html
+//
+//  Style guide: objects.list-bare
+
+.o-list-bare {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

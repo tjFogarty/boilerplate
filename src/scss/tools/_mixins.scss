@@ -1,0 +1,162 @@
+// *************************************
+//
+//  Mixins
+//
+// *************************************
+
+// -------------------------------------
+//	Nth-child - by @paulund
+//	https://paulund.co.uk/nth-child-sass-mixins
+// ------------------------------------
+
+// First child mixin
+//
+// Select the first child
+//
+// Markup: li { @include first-child { color: red; } }
+//
+// Style guide: mixins.first-child
+@mixin first-child() {
+  &:first-of-type {
+    @content
+  }
+}
+
+// Last child mixin
+//
+// Select the last child
+//
+// Markup: li { @include last-child { color: red; } }
+//
+// Style guide: mixins.last-child
+@mixin last-child() {
+  &:last-of-type {
+    @content
+  }
+}
+
+// Even mixin
+//
+// Select even children
+//
+// Markup: li { @include even { color: red; } }
+//
+// Style guide: mixins.even
+@mixin even(){
+  &:nth-child(even) {
+    @content
+  }
+}
+
+// Odd mixin
+//
+// Select odd children
+//
+// Markup: li { @include odd { color: red; } }
+//
+// Style guide: mixins.odd
+@mixin odd(){
+  &:nth-child(odd) {
+    @content
+  }
+}
+
+// First mixin
+//
+// Select first n children
+//
+// Markup: li { @include first(5) { color: red; } }
+//
+// Style guide: mixins.first
+@mixin first($num) {
+
+  @if $num == 1 {
+    &:first-child {
+      @content;
+    }
+  }
+
+  @else {
+    &:nth-child(-n + #{$num}) {
+      @content;
+    }
+  }
+}
+
+// Last mixin
+//
+// Select last n children
+//
+// Markup: li { @include last(5) { color: red; } }
+//
+// Style guide: mixins.last
+@mixin last($num) {
+   &:nth-last-child(-n + #{$num}) {
+    @content;
+  }
+}
+
+// After mixin
+//
+// Select children after n
+//
+// Markup: li { @include after(3) { color: red; } }
+//
+// Style guide: mixins.after
+@mixin after($num) {
+  &:nth-child(n+#{$num + 1}) {
+    @content
+   }
+}
+
+// From end mixin
+//
+// Select n children from the end
+//
+// Markup: li { @include from-end(4) { color: red; } }
+//
+// Style guide: mixins.from-end
+@mixin from-end($num) {
+  &:nth-last-child(#{$num}) {
+   @content
+  }
+}
+
+// Between mixin
+//
+// Select children between two numbers
+//
+// Markup: li { @include between(2, 6) { color: red; } }
+//
+// Style guide: mixins.between
+@mixin between($first,$last) {
+  &:nth-child(n+#{$first}):nth-child(-n+#{$last}) {
+    @content
+  }
+}
+
+// All but mixin
+//
+// Select all but the nth child
+//
+// Markup: li { @include all-but(3) { color: red; } }
+//
+// Style guide: mixins.all-but
+@mixin all-but($num) {
+  &:not(:nth-child(#{$num})) {
+    @content
+  }
+}
+
+// Each mixin
+//
+// Select each nth child
+//
+// Markup: li { @include each(3) { color: red; } }
+//
+// Style guide: mixins.each
+@mixin each($num) {
+  &:nth-child(#{$num}n) {
+    @content
+  }
+}

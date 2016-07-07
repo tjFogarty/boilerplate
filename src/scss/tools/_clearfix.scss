@@ -1,8 +1,10 @@
-// *************************************
+//  clearfix
 //
-//  Clearfix
+//  Clearfix mixin
 //
-// *************************************
+//  Markup: @include clearfix;
+//
+//  Style guide: mixins.clearfix
 
 @mixin clearfix {
   &:before, &:after {

@@ -41,55 +41,54 @@
 //
 // *************************************
 
-
 // -------------------------------------
 //   1. Settings
 // -------------------------------------
 
-@import "settings.defaults";
-@import "settings.colours";
+@import "settings/defaults";
+@import "settings/colours";
 // ----- Check out this file to set some base rules ----- //
-@import "settings.foundation";
+@import "settings/foundation";
 
 // -------------------------------------
 //   2. Tools - Mixins, functions...
 // -------------------------------------
 
-@import "tools.clearfix";
-@import "tools.functions";
-@import "tools.mixins";
+@import "tools/clearfix";
+@import "tools/functions";
+@import "tools/mixins";
 // Though this is a vendor dependency, we need this loaded first in order to use it
 @import "../../assets/lib/foundation-sites/scss/foundation";
-@import "foundation.imports";
+@import "vendor/foundation.imports";
 @import "../../assets/lib/typi/scss/typi";
 
 // -------------------------------------
 //   3. Generic
 // -------------------------------------
 
-@import "generic.box-sizing";
-@import "generic.reset";
+@import "generic/box-sizing";
+@import "generic/reset";
 
 // -------------------------------------
 //   4. Elements - Base styles, no classes
 // -------------------------------------
 
-@import "elements.page";
-@import "elements.paragraphs";
-@import "elements.images";
-@import "elements.links";
-@import "elements.forms";
-@import "elements.inputs";
-@import "elements.headings";
+@import "elements/page";
+@import "elements/paragraphs";
+@import "elements/images";
+@import "elements/links";
+@import "elements/forms";
+@import "elements/inputs";
+@import "elements/headings";
 
 // -------------------------------------
 //   5. Objects - Design patterns
 // -------------------------------------
 
-@import "objects.pack";
-@import "objects.list-bare";
-@import "objects.list-inline";
-@import "objects.layout";
+@import "objects/pack";
+@import "objects/list-bare";
+@import "objects/list-inline";
+@import "objects/layout";
 
 // -------------------------------------
 //   6. Components - UI Styles
@@ -103,10 +102,11 @@
 //   8. Trumps
 // -------------------------------------
 
-@import "trumps.visibility";
-@import "trumps.spacing";
-@import "trumps.print";
-@import "trumps.text";
+@import "trumps/visibility";
+@import "trumps/headings";
+@import "trumps/spacing";
+@import "trumps/print";
+@import "trumps/text";
 
 // -------------------------------------
 //   9. Vendor

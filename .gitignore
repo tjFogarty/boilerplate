@@ -6,3 +6,4 @@ npm-debug.log
 *.sublime-workspace
 .remote-sync.json
 sftp-config.json
+/styleguide

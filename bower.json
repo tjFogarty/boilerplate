@@ -17,9 +17,6 @@
   "dependencies": {
     "typi": "^2.3.0",
     "foundation-sites": "^6.2.3",
-    "jquery": "^3.0.0"
-  },
-  "resolutions": {
     "jquery": "~2.2.0"
   }
 }

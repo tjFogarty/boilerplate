@@ -1,8 +1,21 @@
-// *************************************
+//  Spacing utilities
 //
-//  Spacing
+//  Responsive spacing utilities
 //
-// *************************************
+// .u-ma-30@small-up - All margins
+// .u-mt-30@small-up - Margin top
+// .u-mr-30@small-up - Margin right
+// .u-mb-30@small-up - Margin bottom
+// .u-ml-30@small-up - Margin left
+// .u-pa-30@small-up - All paddings
+// .u-pt-30@small-up - Padding top
+// .u-pr-30@small-up - Padding right
+// .u-pb-30@small-up - Padding bottom
+// .u-pl-30@small-up - Padding left
+//
+//  Markup: <p class="{{modifier_class}}">Spacing example</p>
+//
+//  Style guide: utilities.spacing
 
 $spacing-values: (
   0,

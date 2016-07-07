@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     browserify = require('browserify'),
     babelify = require('babelify'),
     watchify = require('watchify'),
+    run = require('gulp-run'),
     source = require('vinyl-source-stream'),
     notify = require('gulp-notify'),
     wiredep = require('wiredep'),
@@ -124,6 +125,7 @@ gulp.task('styles', function() {
     }))
     .pipe(notify({title: 'Styles Compiled!', message: 'Good hustle', icon: './src/icon.png'}))
     .pipe(gulp.dest('./assets/css/'))
+    .pipe(run('npm run styleguide').exec())
     .pipe(browserSync.stream());
 });
 

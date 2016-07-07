@@ -1,8 +1,14 @@
-// *************************************
+//  Visibility Utilities
 //
-//  Visibility
+//  Responsive utilities for visibility
 //
-// *************************************
+// .u-hidden@small-up - Hidden class
+// .u-visible@small-up - Visible class
+// .u-show-for-sr@small-up - Show for screen reader only
+//
+//  Markup: <p class="{{modifier_class}}">Example text</p>
+//
+//  Style guide: utilities.visibility
 
 @each $bpname in $breakpoint-classes {
   @each $val, $class in $bp-values {
