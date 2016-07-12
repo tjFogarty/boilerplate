@@ -1,10 +1,22 @@
 # Boilerplate
 
-## TL;DR
-`npm run setup` then run `gulp watch` to run the default task which will launch browsersync and watch assets for changes. Feel free to grab a mug of tea while you wait.
+## Setup
+In your command line, run `npm run setup` and give it a few minutes.
 
-When styles are modified, the styleguide will be updated.
-To build the styleguide on it's own, run `npm run styleguide`.
+## Gulp tasks
+
+* gulp watch - watch files and compile/reload/inject when changes are detected
+* gulp watch --styleguide - same as above, but builds styleguide as well
+* gulp - once-off build of all assets
+* gulp --styleguide - once-off build of all assets including styleguide
+* gulp styles - compile styles
+* gulp styles:watch - watch styles for changes and compile
+* gulp scripts - compile JS
+* gulp scripts:watch - watch JS for changes and compile
+* gulp images - optimise images in /src/images and move to /assets/images
+* gulp wiredep - inject Bower dependencies
+* gulp build-styleguide - build the styleguide with KSS Node
+
 
 If you're using [Atom](https://atom.io), then you can add this to your Snippets (Atom > Snippets) to build a comment for your styles to translate to the styleguide:
 
@@ -27,11 +39,10 @@ This boilerplate makes heavy use of awesome things done by other people:
 
 ## Project Config Files
 
-* `.editorconfig` - Most editors pick this up, and it lets you specify a consistent coding styles
+* `.editorconfig` - Most editors pick this up, and it lets you specify a consistent coding styles. Search for `editorconfig` and install it for your editor of choice
 * `.eslintrc` - Rules for ESLint
 * `.babelrc` - Setup to transpile ES2015 to ES5
 * `.bowerrc` - Instructions for Bower
-* `.stylelintrc` - Rules for linting Sass/CSS
 * `kss-config.json` - Config for creating a styleguide
 
 ## Folders
@@ -50,3 +61,4 @@ This boilerplate makes heavy use of awesome things done by other people:
 
 * [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
 * [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4)
+* [CSS Guidelines](http://cssguidelin.es/)

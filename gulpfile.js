@@ -1,4 +1,22 @@
+/**
+ * Common Tasks
+ *
+ * gulp watch - watch files and compile/reload/inject when changes are detected
+ * gulp watch --styleguide - same as above, but builds styleguide as well
+ * gulp - once-off build of all assets
+ * gulp --styleguide - once-off build of all assets including styleguide
+ * gulp styles - compile styles
+ * gulp styles:watch - watch styles for changes and compile
+ * gulp scripts - compile JS
+ * gulp scripts:watch - watch JS for changes and compile
+ * gulp images - optimise images in /src/images and move to /assets/images
+ * gulp wiredep - inject Bower dependencies
+ * gulp build-styleguide - build the styleguide with KSS Node
+ */
+
 var gulp = require('gulp'),
+    argv = require('yargs').argv,
+    gulpif = require('gulp-if'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     gutil = require('gulp-util'),
@@ -12,6 +30,25 @@ var gulp = require('gulp'),
     wiredep = require('wiredep'),
     imagemin = require('gulp-imagemin');
 
+// tasks for when we run `gulp`
+var defaultTaskList = ['styles', 'scripts', 'wiredep'];
+// tasks for when we run `gulp watch`
+var watchTaskList = ['styles:watch', 'scripts:watch', 'browser-sync', 'wiredep:watch'];
+
+// Check if the --styleguide arg was passed
+// if so, add 'build-styleguide' to the task lists
+if (argv.styleguide) {
+  defaultTaskList.push('build-styleguide');
+  watchTaskList.push('build-styleguide:watch');
+}
+
+/**
+ * A once-off, build everything task
+ * @param  {string} 'default'  task name
+ * @param  {Array}             list of tasks to run
+ */
+gulp.task('default', defaultTaskList);
+
 // Change the proxy property to suit your domain
 gulp.task('browser-sync', function() {
   browserSync.init({
@@ -21,16 +58,33 @@ gulp.task('browser-sync', function() {
   });
 });
 
+/**
+ * Inject Bower JS dependencies into footer.php
+ * @param  {string} 'wiredep' task name
+ * @param  {function}
+ * @return {void}
+ */
 gulp.task('wiredep', function() {
   gulp.src('./_footer.php')
     .pipe(wiredep.stream())
     .pipe(gulp.dest('./'));
 });
 
+/**
+ * Watch bower.json for changes and run 'wiredep' task
+ * @param  {string} 'wiredep:watch' task name
+ * @param  {function}
+ * @return {void}
+ */
 gulp.task('wiredep:watch', function() {
   gulp.watch('bower.json', ['wiredep']);
 });
 
+/**
+ * Optimise images in /src/images directory and output into /assets/images
+ * @param  {string} 'images'  task name
+ * @param  {function}
+ */
 gulp.task('images', function() {
   return gulp.src('src/images/*')
     .pipe(imagemin({
@@ -40,9 +94,18 @@ gulp.task('images', function() {
     .pipe(gulp.dest('assets/images'));
 });
 
-gulp.task('watch', ['styles:watch', 'scripts:watch', 'browser-sync', 'wiredep:watch'], function() {
-      gulp.watch('**/*.php').on('change', browserSync.reload);
-      gulp.watch('./assets/scripts/**/*.js').on('change', browserSync.reload);
+/**
+ * Watch files for changes, and boot up browser-sync
+ * @param  {string} 'watch'          task name
+ * @param  {Array}                   list of tasks to run
+ * @param  {function}
+ */
+gulp.task('watch', watchTaskList, function() {
+  // these are our template files
+  // change these when moving to a CMS or other system to reload page on changes
+  gulp.watch('**/*.php').on('change', browserSync.reload);
+  // when our JS is compiled, reload the browser
+  gulp.watch('./assets/scripts/**/*.js').on('change', browserSync.reload);
 });
 
 /**
@@ -125,7 +188,6 @@ gulp.task('styles', function() {
     }))
     .pipe(notify({title: 'Styles Compiled!', message: 'Good hustle', icon: './src/icon.png'}))
     .pipe(gulp.dest('./assets/css/'))
-    .pipe(run('npm run styleguide').exec())
     .pipe(browserSync.stream());
 });
 
@@ -136,4 +198,22 @@ gulp.task('styles', function() {
  */
 gulp.task('styles:watch', function() {
   gulp.watch('src/scss/**/*.scss', ['styles']);
+});
+
+/**
+ * Build the styleguide
+ * @param  {string} 'styleguide' task name
+ * @param  {function}
+ */
+gulp.task('build-styleguide', function() {
+  run('npm run styleguide').exec();
+});
+
+/**
+ * Watch for changes, and build the styleguide
+ * @param  {string} task name
+ * @param  {function}
+ */
+gulp.task('build-styleguide:watch', function() {
+  gulp.watch('src/scss/**/*.*', ['build-styleguide']);
 });

@@ -11,7 +11,7 @@
 
   "homepage": "../../homepage.md",
 
-  "verbose": true,
+  "//": "Add \"verbose\": true to see a more detailed output",
 
   "//": "The css and js paths are URLs relative to the generated style guide.",
   "css": [

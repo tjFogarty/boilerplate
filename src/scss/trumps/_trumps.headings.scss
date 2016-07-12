@@ -10,17 +10,14 @@
 //
 //  Style guide: utilities.headings
 
-.u-h1,
-%u-h1 {
+.u-h1 {
     @include typi($h1-map);
 }
 
-.u-h2,
-%u-h2 {
+.u-h2 {
     @include typi($h2-map);
 }
 
-.u-h3,
-%u-h3 {
+.u-h3 {
     @include typi($h3-map);
 }
