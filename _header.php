@@ -18,6 +18,62 @@
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-XXXXX-X','auto');ga('send','pageview');
     </script>
+
+    <script>
+       var WebFontConfig = {
+        //   typekit: { id: 'xxxxxx' } // typekit
+
+        // google: { families: ['Droid Sans'] }, // google fonts
+
+        // custom: { // custom solution
+        //     families: ['My Font', 'My Other Font:n4,i4,n7'],
+        //     urls: ['/fonts.css']
+        // }
+
+        // timeout: 2000 // Set the timeout to two seconds
+       };
+
+       (function(d) {
+          var wf = d.createElement('script'), s = d.scripts[0];
+          wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
+          s.parentNode.insertBefore(wf, s);
+       })(document);
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.5;
+        }
+
+        code {
+            background: #333;
+            color: orange;
+            padding: 5px;
+            display: inline-block;
+            border: none;
+            border-radius: 3px;
+        }
+
+        pre {
+            border-radius: 3px;
+            background: #333;
+            overflow: scroll;
+        }
+
+        pre code {
+            display: block;
+        }
+
+        ul {
+            padding-left: 14px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
   </head>
   <body>
 
