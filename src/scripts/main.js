@@ -1,5 +1,5 @@
-import Foundation from './modules/foundation';
+import FoundationController from './modules/foundation';
 
 $(document).ready(function() {
-  Foundation.init();
+  FoundationController.init();
 });

@@ -1,4 +1,4 @@
-export default Foundation = {
+export default {
   init() {
     $(document).foundation();
   }
