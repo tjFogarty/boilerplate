@@ -11,6 +11,7 @@ In your command line, run `npm run setup` and give it a few minutes.
 * gulp --styleguide - once-off build of all assets including styleguide
 * gulp styles - compile styles
 * gulp styles:watch - watch styles for changes and compile
+* gulp critical - generates critical css for pages specified in gulpfile.js
 * gulp scripts - compile JS
 * gulp scripts:watch - watch JS for changes and compile
 * gulp images - optimise images in /src/images and move to /assets/images

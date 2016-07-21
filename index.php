@@ -24,6 +24,7 @@
                 <li><code>gulp styles:watch</code> - watch styles for changes and compile</li>
                 <li><code>gulp scripts</code> - compile JS</li>
                 <li><code>gulp scripts:watch</code> - watch JS for changes and compile</li>
+                <li><code>gulp critical</code> - generates critical css for pages specified in gulpfile.js</li>
                 <li><code>gulp images</code> - optimise images in /src/images and move to /assets/images</li>
                 <li><code>gulp wiredep</code> - inject Bower dependencies</li>
                 <li><code>gulp build-styleguide</code> - build the styleguide with KSS Node</li>

@@ -7,6 +7,7 @@
  * gulp --styleguide - once-off build of all assets including styleguide
  * gulp styles - compile styles
  * gulp styles:watch - watch styles for changes and compile
+ * gulp critical - generates critical css for pages specified in gulpfile.js
  * gulp scripts - compile JS
  * gulp scripts:watch - watch JS for changes and compile
  * gulp images - optimise images in /src/images and move to /assets/images
@@ -18,6 +19,7 @@ var gulp = require('gulp'),
     argv = require('yargs').argv,
     gulpif = require('gulp-if'),
     sass = require('gulp-sass'),
+    penthouse = require('penthouse'),
     autoprefixer = require('gulp-autoprefixer'),
     gutil = require('gulp-util'),
     browserSync = require('browser-sync').create(),
@@ -28,6 +30,9 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream'),
     notify = require('gulp-notify'),
     wiredep = require('wiredep'),
+    fs = require('fs'),
+    path = require('path'),
+    __basedir = './',
     imagemin = require('gulp-imagemin');
 
 // tasks for when we run `gulp`
@@ -41,6 +46,38 @@ if (argv.styleguide) {
   defaultTaskList.push('build-styleguide');
   watchTaskList.push('build-styleguide:watch');
 }
+
+/**
+ * Generate critical css
+ * @param  {string} 'critical' task name
+ * @param  {function} callback
+ * @return {void}
+ */
+gulp.task('critical', function() {
+  // modify these for your own project
+  var baseUrl = 'http://boilerplate.dev';
+  var pages = [
+    {
+      url: '/',
+      filename: 'home'
+    }
+  ];
+
+  for (var i = 0; i < pages.length; i++) {
+    var page = pages[i];
+
+    penthouse({
+      url: baseUrl + page.url,
+      css: path.join(__basedir + 'assets/css/main.css')
+    }, function(err, criticalCss) {
+      if (err) {
+        throw err;
+      }
+
+      fs.writeFileSync('./assets/css/' + page.filename + '-critical.css', criticalCss);
+    });
+  }
+});
 
 /**
  * A once-off, build everything task

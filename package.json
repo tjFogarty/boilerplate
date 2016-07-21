@@ -28,6 +28,7 @@
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-util": "^3.0.7",
     "kss": "^3.0.0-beta.14",
+    "penthouse": "^0.9.10",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0",
     "wiredep": "^4.0.0",
