@@ -21,66 +21,66 @@ $spacing-value: 0; // initial value will be 0, this will be incremented
 $spacing-increment-by: 5;
 $spacing-max-limit: 100;
 
-@while $spacing-value < $spacing-max-limit {
-    @each $bpname in $breakpoint-classes {
-      @each $val, $class in $bp-values {
-        @include breakpoint($bpname $val) {
-        .u-ma-#{$spacing-value}\@#{$bpname}-#{$class} {
+@while $spacing-value <= $spacing-max-limit {
+  @each $bpname in $breakpoint-classes {
+    @each $val, $class in $bp-values {
+      @include breakpoint($bpname $val) {
+        .u-ma-#{$spacing-value}\@#{$bpname}#{$class} {
           margin: $spacing-value * 1px !important;
         }
 
-        .u-mt-#{$spacing-value}\@#{$bpname}-#{$class} {
+        .u-mt-#{$spacing-value}\@#{$bpname}#{$class} {
           margin-top: $spacing-value * 1px !important;
         }
 
-        .u-mr-#{$spacing-value}\@#{$bpname}-#{$class} {
+        .u-mr-#{$spacing-value}\@#{$bpname}#{$class} {
           margin-right: $spacing-value * 1px !important;
         }
 
-        .u-mb-#{$spacing-value}\@#{$bpname}-#{$class} {
+        .u-mb-#{$spacing-value}\@#{$bpname}#{$class} {
           margin-bottom: $spacing-value * 1px !important;
         }
 
-        .u-ml-#{$spacing-value}\@#{$bpname}-#{$class} {
+        .u-ml-#{$spacing-value}\@#{$bpname}#{$class} {
           margin-left: $spacing-value * 1px !important;
         }
 
-        .u-mx-#{$spacing-value}\@#{$bpname}-#{$class} {
+        .u-mx-#{$spacing-value}\@#{$bpname}#{$class} {
           margin-left: $spacing-value * 1px !important;
           margin-right: $spacing-value * 1px !important;
         }
 
-        .u-my-#{$spacing-value}\@#{$bpname}-#{$class} {
+        .u-my-#{$spacing-value}\@#{$bpname}#{$class} {
           margin-top: $spacing-value * 1px !important;
           margin-bottom: $spacing-value * 1px !important;
         }
 
-        .u-pa-#{$spacing-value}\@#{$bpname}-#{$class} {
+        .u-pa-#{$spacing-value}\@#{$bpname}#{$class} {
           padding: $spacing-value * 1px !important;
         }
 
-        .u-pt-#{$spacing-value}\@#{$bpname}-#{$class} {
+        .u-pt-#{$spacing-value}\@#{$bpname}#{$class} {
           padding-top: $spacing-value * 1px !important;
         }
 
-        .u-pr-#{$spacing-value}\@#{$bpname}-#{$class} {
+        .u-pr-#{$spacing-value}\@#{$bpname}#{$class} {
           padding-right: $spacing-value * 1px !important;
         }
 
-        .u-pb-#{$spacing-value}\@#{$bpname}-#{$class} {
+        .u-pb-#{$spacing-value}\@#{$bpname}#{$class} {
           padding-bottom: $spacing-value * 1px !important;
         }
 
-        .u-pl-#{$spacing-value}\@#{$bpname}-#{$class} {
+        .u-pl-#{$spacing-value}\@#{$bpname}#{$class} {
           padding-left: $spacing-value * 1px !important;
         }
 
-        .u-px-#{$spacing-value}\@#{$bpname}-#{$class} {
+        .u-px-#{$spacing-value}\@#{$bpname}#{$class} {
           padding-left: $spacing-value * 1px !important;
           padding-right: $spacing-value * 1px !important;
         }
 
-        .u-py-#{$spacing-value}\@#{$bpname}-#{$class} {
+        .u-py-#{$spacing-value}\@#{$bpname}#{$class} {
           padding-top: $spacing-value * 1px !important;
           padding-bottom: $spacing-value * 1px !important;
         }
