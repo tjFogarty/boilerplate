@@ -1,5 +1,5 @@
 export default {
-  init() {
+  init () {
     $(document).foundation();
   }
 };

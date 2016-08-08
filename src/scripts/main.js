@@ -1,5 +1,5 @@
 import FoundationController from './modules/foundation';
 
-$(document).ready(function() {
+$(document).ready(function () {
   FoundationController.init();
 });

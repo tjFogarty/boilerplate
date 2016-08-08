@@ -15,30 +15,42 @@
  * gulp build-styleguide - build the styleguide with KSS Node
  */
 
-var gulp = require('gulp'),
-    argv = require('yargs').argv,
-    gulpif = require('gulp-if'),
-    sass = require('gulp-sass'),
-    penthouse = require('penthouse'),
-    autoprefixer = require('gulp-autoprefixer'),
-    gutil = require('gulp-util'),
-    browserSync = require('browser-sync').create(),
-    browserify = require('browserify'),
-    babelify = require('babelify'),
-    watchify = require('watchify'),
-    run = require('gulp-run'),
-    source = require('vinyl-source-stream'),
-    notify = require('gulp-notify'),
-    wiredep = require('wiredep'),
-    fs = require('fs'),
-    path = require('path'),
-    __basedir = './',
-    imagemin = require('gulp-imagemin');
+var gulp = require('gulp');
+var argv = require('yargs').argv;
+var sass = require('gulp-sass');
+var penthouse = require('penthouse');
+var autoprefixer = require('gulp-autoprefixer');
+var gutil = require('gulp-util');
+var browserSync = require('browser-sync').create();
+var browserify = require('browserify');
+var babelify = require('babelify');
+var watchify = require('watchify');
+var run = require('gulp-run');
+var source = require('vinyl-source-stream');
+var notify = require('gulp-notify');
+var wiredep = require('wiredep');
+var fs = require('fs');
+var path = require('path');
+var __basedir = './';
+var imagemin = require('gulp-imagemin');
+var CleanCSS = require('clean-css');
 
 // tasks for when we run `gulp`
 var defaultTaskList = ['styles', 'scripts', 'wiredep'];
 // tasks for when we run `gulp watch`
 var watchTaskList = ['styles:watch', 'scripts:watch', 'browser-sync', 'wiredep:watch'];
+
+// modify these for your own project
+// this generates your critical css
+var pages = [
+  {
+    url: '/',
+    filename: 'site-index'
+  }
+];
+
+// Used for building critical CSS
+var baseUrl = 'http://boilerplate.dev';
 
 // Check if the --styleguide arg was passed
 // if so, add 'build-styleguide' to the task lists
@@ -53,31 +65,36 @@ if (argv.styleguide) {
  * @param  {function} callback
  * @return {void}
  */
-gulp.task('critical', function() {
-  // modify these for your own project
-  var baseUrl = 'http://boilerplate.dev';
-  var pages = [
-    {
-      url: '/',
-      filename: 'home'
-    }
-  ];
-
-  for (var i = 0; i < pages.length; i++) {
-    var page = pages[i];
-
-    penthouse({
-      url: baseUrl + page.url,
-      css: path.join(__basedir + 'assets/css/main.css')
-    }, function(err, criticalCss) {
-      if (err) {
-        throw err;
-      }
-
-      fs.writeFileSync('./assets/css/' + page.filename + '-critical.css', criticalCss);
-    });
-  }
+gulp.task('critical', function () {
+  callPenthouseRecursive();
 });
+
+/**
+ * Loops through our pages array to generate css
+ * @see https://github.com/pocketjoso/penthouse/issues/110
+ * @param  {Array} pages
+ * @return {void}
+ */
+function callPenthouseRecursive () {
+  var page = pages.shift();
+
+  penthouse({
+    url: baseUrl + page.url,
+    css: path.join(__basedir + 'assets/css/main.css')
+  }, function (err, criticalCss) {
+    if (err) {
+      throw err;
+    }
+
+    var minified = new CleanCSS().minify(criticalCss).styles;
+
+    fs.writeFileSync('./assets/css/' + page.filename + '-critical.css', minified);
+
+    if (pages.length !== 0) {
+      callPenthouseRecursive();
+    }
+  });
+}
 
 /**
  * A once-off, build everything task
@@ -87,7 +104,7 @@ gulp.task('critical', function() {
 gulp.task('default', defaultTaskList);
 
 // Change the proxy property to suit your domain
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
   browserSync.init({
     proxy: 'boilerplate.dev',
     xip: true,
@@ -101,7 +118,7 @@ gulp.task('browser-sync', function() {
  * @param  {function}
  * @return {void}
  */
-gulp.task('wiredep', function() {
+gulp.task('wiredep', function () {
   gulp.src('./_footer.php')
     .pipe(wiredep.stream())
     .pipe(gulp.dest('./'));
@@ -113,7 +130,7 @@ gulp.task('wiredep', function() {
  * @param  {function}
  * @return {void}
  */
-gulp.task('wiredep:watch', function() {
+gulp.task('wiredep:watch', function () {
   gulp.watch('bower.json', ['wiredep']);
 });
 
@@ -122,7 +139,7 @@ gulp.task('wiredep:watch', function() {
  * @param  {string} 'images'  task name
  * @param  {function}
  */
-gulp.task('images', function() {
+gulp.task('images', function () {
   return gulp.src('src/images/*')
     .pipe(imagemin({
       progressive: true,
@@ -137,7 +154,7 @@ gulp.task('images', function() {
  * @param  {Array}                   list of tasks to run
  * @param  {function}
  */
-gulp.task('watch', watchTaskList, function() {
+gulp.task('watch', watchTaskList, function () {
   // these are our template files
   // change these when moving to a CMS or other system to reload page on changes
   gulp.watch('**/*.php').on('change', browserSync.reload);
@@ -150,7 +167,7 @@ gulp.task('watch', watchTaskList, function() {
  * @see https://gist.github.com/wesbos/52b8fe7e972356e85b43
  * @return {void}
  */
-function handleErrors() {
+function handleErrors () {
   var args = Array.prototype.slice.call(arguments);
   notify.onError({
     title: 'Compile Error',
@@ -163,19 +180,19 @@ function handleErrors() {
  * Build scripts
  * @see https://gist.github.com/wesbos/52b8fe7e972356e85b43
  */
-function buildScript(file, watch) {
+function buildScript (file, watch) {
   var props = {
     entries: ['./src/scripts/' + file],
-    debug : true,
-    transform:  [babelify]
+    debug: true,
+    transform: [babelify]
   };
 
   // watchify() if watch requested, otherwise run browserify() once
   var bundler = watch ? watchify(browserify(props)) : browserify(props);
 
-  function rebundle() {
-    var stream = bundler.bundle(),
-        fileName = file.split('.')[0];
+  function rebundle () {
+    var stream = bundler.bundle();
+    var fileName = file.split('.')[0];
 
     return stream
       .on('error', handleErrors)
@@ -185,7 +202,7 @@ function buildScript(file, watch) {
   }
 
   // listen for an update and run rebundle
-  bundler.on('update', function() {
+  bundler.on('update', function () {
     rebundle();
     gutil.log('Rebundle...');
   });
@@ -199,7 +216,7 @@ function buildScript(file, watch) {
  * @param  {string} 'scripts'
  * @param  {function} callback
  */
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
   return buildScript('main.js', false);
 });
 
@@ -208,7 +225,7 @@ gulp.task('scripts', function() {
  * @param  {string} 'scripts:watch'
  * @param  {function} callback
  */
-gulp.task('scripts:watch', function() {
+gulp.task('scripts:watch', function () {
   return buildScript('main.js', true);
 });
 
@@ -217,11 +234,11 @@ gulp.task('scripts:watch', function() {
  * @param  {string} 'styles'
  * @param  {function} callback for the task
  */
-gulp.task('styles', function() {
+gulp.task('styles', function () {
   return gulp.src('./src/scss/main.scss')
     .pipe(sass().on('error', handleErrors))
     .pipe(autoprefixer({
-        browsers: ['last 5 versions']
+      browsers: ['last 5 versions']
     }))
     .pipe(notify({title: 'Styles Compiled!', message: 'Good hustle', icon: './src/icon.png'}))
     .pipe(gulp.dest('./assets/css/'))
@@ -233,7 +250,7 @@ gulp.task('styles', function() {
  * @param  {string} 'styles:watch'
  * @param  {function} callback
  */
-gulp.task('styles:watch', function() {
+gulp.task('styles:watch', function () {
   gulp.watch('src/scss/**/*.scss', ['styles']);
 });
 
@@ -242,7 +259,7 @@ gulp.task('styles:watch', function() {
  * @param  {string} 'styleguide' task name
  * @param  {function}
  */
-gulp.task('build-styleguide', function() {
+gulp.task('build-styleguide', function () {
   run('npm run styleguide').exec();
 });
 
@@ -251,6 +268,6 @@ gulp.task('build-styleguide', function() {
  * @param  {string} task name
  * @param  {function}
  */
-gulp.task('build-styleguide:watch', function() {
+gulp.task('build-styleguide:watch', function () {
   gulp.watch('src/scss/**/*.*', ['build-styleguide']);
 });
