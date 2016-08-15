@@ -81,6 +81,11 @@
                 </li>
             </ul>
 
+            <h3>Eslint</h3>
+            <p>This project can use <a href="https://github.com/typicode/husky" target="_blank">Husky</a> to help lint your code. To enable this, go to your <code>package.json</code> file, and rename <code>precommit-eg</code> to <code>precommit</code>.</p>
+
+            <p>This will also attempt to fix any issues in your JS that doesn't line up with the rules in <code>.eslintrc</code>.</p>
+
             <h2>Folders</h2>
 
             <h3>Public</h3>

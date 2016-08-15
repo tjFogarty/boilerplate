@@ -46,6 +46,11 @@ This boilerplate makes heavy use of awesome things done by other people:
 * `.bowerrc` - Instructions for Bower
 * `kss-config.json` - Config for creating a styleguide
 
+### Eslint
+
+This project can use [Husky](https://github.com/typicode/husky) to help lint your code. To enable this, go to your `package.json` file, and rename `precommit-eg` to `precommit`.
+This will also attempt to fix any issues in your JS that doesn't line up with the rules in `.eslintrc`.
+
 ## Folders
 
 ### Public

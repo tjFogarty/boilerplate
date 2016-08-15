@@ -8,7 +8,7 @@
     "setup": "npm install && bower install",
     "styleguide": "./node_modules/.bin/kss --config kss-config.json",
     "scripts:lint": "./node_modules/.bin/eslint --fix ./src/scripts/**",
-    "precommit": "npm run scripts:lint"
+    "precommit-eg": "npm run scripts:lint"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.4",
