@@ -6,7 +6,9 @@
   "private": true,
   "scripts": {
     "setup": "npm install && bower install",
-    "styleguide": "./node_modules/.bin/kss --config kss-config.json"
+    "styleguide": "./node_modules/.bin/kss --config kss-config.json",
+    "scripts:lint": "./node_modules/.bin/eslint --fix ./src/scripts/**",
+    "precommit": "npm run scripts:lint"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.4",
@@ -31,6 +33,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-util": "^3.0.7",
+    "husky": "^0.11.6",
     "kss": "^3.0.0-beta.14",
     "penthouse": "^0.9.10",
     "vinyl-source-stream": "^1.1.0",
