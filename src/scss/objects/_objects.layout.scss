@@ -19,8 +19,93 @@
 // .l-flex--w-nw@small-up  - flex-wrap: no-wrap
 // .l-flex--w-w@small-up  - flex-wrap: wrap
 // .l-flex--w-wr@small-up  - flex-wrap: wrap-reverse
+// .l-flex--jc-fs@small-only  -  justify-content: flex-start
+// .l-flex--jc-fe@small-only  - justify-content: flex-end
+// .l-flex--jc-c@small-only   - justify-content: center
+// .l-flex--jc-sb@small-only  - justify-content: space-between
+// .l-flex--jc-sa@small-only  - justify-content: space-around
+// .l-flex--ai-fs@small-only  - align-items: flex-start
+// .l-flex--ai-fe@small-only  - align-items: flex-end
+// .l-flex--ai-c@small-only  - align-items: center
+// .l-flex--ai-s@small-only  - align-items: stretch
+// .l-flex--ai-b@small-only  - align-items: baseline
+// .l-flex--dir-r@small-only  - flex-direction: row
+// .l-flex--dir-rr@small-only  - flex-direction: row-reverse
+// .l-flex--dir-c@small-only  - flex-direction: column
+// .l-flex--dir-cr@small-only  - flex-direction: column-reverse
+// .l-flex--w-nw@small-only  - flex-wrap: no-wrap
+// .l-flex--w-w@small-only  - flex-wrap: wrap
+// .l-flex--w-wr@small-only  - flex-wrap: wrap-reverse
+// .l-flex--jc-fs@medium-up  -  justify-content: flex-start
+// .l-flex--jc-fe@medium-up  - justify-content: flex-end
+// .l-flex--jc-c@medium-up   - justify-content: center
+// .l-flex--jc-sb@medium-up  - justify-content: space-between
+// .l-flex--jc-sa@medium-up  - justify-content: space-around
+// .l-flex--ai-fs@medium-up  - align-items: flex-start
+// .l-flex--ai-fe@medium-up  - align-items: flex-end
+// .l-flex--ai-c@medium-up  - align-items: center
+// .l-flex--ai-s@medium-up  - align-items: stretch
+// .l-flex--ai-b@medium-up  - align-items: baseline
+// .l-flex--dir-r@medium-up  - flex-direction: row
+// .l-flex--dir-rr@medium-up  - flex-direction: row-reverse
+// .l-flex--dir-c@medium-up  - flex-direction: column
+// .l-flex--dir-cr@medium-up  - flex-direction: column-reverse
+// .l-flex--w-nw@medium-up  - flex-wrap: no-wrap
+// .l-flex--w-w@medium-up  - flex-wrap: wrap
+// .l-flex--w-wr@medium-up  - flex-wrap: wrap-reverse
+// .l-flex--jc-fs@medium-only  -  justify-content: flex-start
+// .l-flex--jc-fe@medium-only  - justify-content: flex-end
+// .l-flex--jc-c@medium-only   - justify-content: center
+// .l-flex--jc-sb@medium-only  - justify-content: space-between
+// .l-flex--jc-sa@medium-only  - justify-content: space-around
+// .l-flex--ai-fs@medium-only  - align-items: flex-start
+// .l-flex--ai-fe@medium-only  - align-items: flex-end
+// .l-flex--ai-c@medium-only  - align-items: center
+// .l-flex--ai-s@medium-only  - align-items: stretch
+// .l-flex--ai-b@medium-only  - align-items: baseline
+// .l-flex--dir-r@medium-only  - flex-direction: row
+// .l-flex--dir-rr@medium-only  - flex-direction: row-reverse
+// .l-flex--dir-c@medium-only  - flex-direction: column
+// .l-flex--dir-cr@medium-only  - flex-direction: column-reverse
+// .l-flex--w-nw@medium-only  - flex-wrap: no-wrap
+// .l-flex--w-w@medium-only  - flex-wrap: wrap
+// .l-flex--w-wr@medium-only  - flex-wrap: wrap-reverse
+// .l-flex--jc-fs@large-up  -  justify-content: flex-start
+// .l-flex--jc-fe@large-up  - justify-content: flex-end
+// .l-flex--jc-c@large-up   - justify-content: center
+// .l-flex--jc-sb@large-up  - justify-content: space-between
+// .l-flex--jc-sa@large-up  - justify-content: space-around
+// .l-flex--ai-fs@large-up  - align-items: flex-start
+// .l-flex--ai-fe@large-up  - align-items: flex-end
+// .l-flex--ai-c@large-up  - align-items: center
+// .l-flex--ai-s@large-up  - align-items: stretch
+// .l-flex--ai-b@large-up  - align-items: baseline
+// .l-flex--dir-r@large-up  - flex-direction: row
+// .l-flex--dir-rr@large-up  - flex-direction: row-reverse
+// .l-flex--dir-c@large-up  - flex-direction: column
+// .l-flex--dir-cr@large-up  - flex-direction: column-reverse
+// .l-flex--w-nw@large-up  - flex-wrap: no-wrap
+// .l-flex--w-w@large-up  - flex-wrap: wrap
+// .l-flex--w-wr@large-up  - flex-wrap: wrap-reverse
+// .l-flex--jc-fs@large-only  -  justify-content: flex-start
+// .l-flex--jc-fe@large-only  - justify-content: flex-end
+// .l-flex--jc-c@large-only   - justify-content: center
+// .l-flex--jc-sb@large-only  - justify-content: space-between
+// .l-flex--jc-sa@large-only  - justify-content: space-around
+// .l-flex--ai-fs@large-only  - align-items: flex-start
+// .l-flex--ai-fe@large-only  - align-items: flex-end
+// .l-flex--ai-c@large-only  - align-items: center
+// .l-flex--ai-s@large-only  - align-items: stretch
+// .l-flex--ai-b@large-only  - align-items: baseline
+// .l-flex--dir-r@large-only  - flex-direction: row
+// .l-flex--dir-rr@large-only  - flex-direction: row-reverse
+// .l-flex--dir-c@large-only  - flex-direction: column
+// .l-flex--dir-cr@large-only  - flex-direction: column-reverse
+// .l-flex--w-nw@large-only  - flex-wrap: no-wrap
+// .l-flex--w-w@large-only  - flex-wrap: wrap
+// .l-flex--w-wr@large-only  - flex-wrap: wrap-reverse
 //
-//  Markup: html/layout.hbs
+//  Markup: ../../templates/objects/layout.twig
 //
 //  Style guide: objects.layout
 
@@ -85,6 +170,13 @@ $flex-wrap: (
         .l-flex--dir-#{$name}\@#{$bpname}#{$class} {
           display: flex;
           flex-direction: $item;
+        }
+      }
+
+      @each $name, $item in $flex-wrap {
+        .l-flex--wrap-#{$name}\@#{$bpname}#{$class} {
+          display: flex;
+          flex-wrap: $item;
         }
       }
     }

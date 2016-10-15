@@ -19,18 +19,5 @@
         <!-- endbower -->
 
         <script src="/assets/scripts/main.bundle.js"></script>
-
-        <!-- Service Worker example - see sw.js in project root -->
-        <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function(reg) {
-            // registration worked
-            console.log('Registration succeeded. Scope is ' + reg.scope);
-          }).catch(function(error) {
-            // registration failed
-            console.log('Registration failed with ' + error);
-          });
-        }
-        </script>
     </body>
 </html>

@@ -40,6 +40,9 @@ var defaultTaskList = ['styles', 'scripts', 'wiredep'];
 // tasks for when we run `gulp watch`
 var watchTaskList = ['styles:watch', 'scripts:watch', 'browser-sync', 'wiredep:watch'];
 
+// This will be used for browserSync and critical styles
+var devUrl = 'boilerplate.dev';
+
 // modify these for your own project
 // this generates your critical css
 var pages = [
@@ -50,7 +53,7 @@ var pages = [
 ];
 
 // Used for building critical CSS
-var baseUrl = 'http://boilerplate.dev';
+var baseUrl = 'http://' + devUrl;
 
 // Check if the --styleguide arg was passed
 // if so, add 'build-styleguide' to the task lists
@@ -60,7 +63,7 @@ if (argv.styleguide) {
 }
 
 /**
- * Generate critical css
+ * Generate critical css - this can take some time
  * @param  {string} 'critical' task name
  * @param  {function} callback
  * @return {void}
@@ -106,7 +109,7 @@ gulp.task('default', defaultTaskList);
 // Change the proxy property to suit your domain
 gulp.task('browser-sync', function () {
   browserSync.init({
-    proxy: 'boilerplate.dev',
+    proxy: devUrl,
     xip: true,
     online: true
   });

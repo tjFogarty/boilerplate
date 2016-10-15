@@ -7,7 +7,7 @@
 
   "title": "Boilerplate Styleguide",
 
-  "builder": "styleguide-builder",
+  "builder": "node_modules/kss/builder/twig",
 
   "homepage": "../../homepage.md",
 
